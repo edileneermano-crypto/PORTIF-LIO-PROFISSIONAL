@@ -1,0 +1,433 @@
+<!-- Declaração do tipo de documento, essencial para que o navegador renderize a página no modo padrão. -->
+<!DOCTYPE html>
+<!-- A tag <html> é o elemento raiz de uma página HTML. O atributo 'lang' define o idioma do conteúdo, importante para acessibilidade e SEO. -->
+<html lang="pt-br">
+  <!-- A tag <head> contém metadados (informações sobre o documento) que não são exibidos diretamente na página. -->
+  <head>
+    <!-- Define o conjunto de caracteres para o documento, UTF-8 é o padrão e suporta a maioria dos caracteres. -->
+    <meta charset="UTF-8" />
+    <!-- Configura a 'viewport' para que o site seja responsivo e se adapte a diferentes tamanhos de tela, como em celulares. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- O título da página, que aparece na aba do navegador. -->
+    <title>Edilene Ermano | Desenvolvedora Front-end</title>
+    <!-- Link para a folha de estilos CSS externa que define a aparência da página. -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link para importar fontes customizadas do Google Fonts. -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link para a biblioteca Font Awesome, que fornece ícones (como os de redes sociais e skills). -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <!-- A tag <body> contém todo o conteúdo visível da página web. -->
+  <body>
+    <!-- O <header> representa o cabeçalho da página, geralmente contendo o logo e a navegação principal. -->
+    <header class="main-header">
+      <div class="logo">Edilene Ermano</div>
+      <!-- A tag <nav> define um conjunto de links de navegação. -->
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#certificacoes">Certificações</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- A tag <main> define o conteúdo principal e único do documento. -->
+    <main>
+      <!-- Seção "Home" ou "Hero", a primeira coisa que o usuário vê. O 'id' permite a navegação interna (ex: <a href="#home">). -->
+      <section id="home" class="hero-section">
+        <div class="hero-content">
+          <div class="text-content">
+            <h1>Desenvolvedora de Software | Front-end</h1>
+            <p class="tech-stack">HTML | CSS | JavaScript</p>
+
+            <!-- Botões de Chamada para Ação (Call to Action). -->
+            <div class="cta-buttons">
+              <a
+                href="Currículo/Desenvolvedora_de_Software_Edilene_Ermano.pdf"
+                download
+                class="btn btn-primary"
+                >Baixar CV</a
+              >
+              <a href="#sobre-mim" class="btn btn-secondary">Sobre mim</a>
+            </div>
+          </div>
+
+          <!-- Container para a imagem de perfil ou de destaque. -->
+          <div class="image-placeholder">
+            <img
+              src="imagens/Edilene Ermano.png"
+              alt="Edilene Ermano - Desenvolvedora sentada programando"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção "Sobre Mim". -->
+      <section id="sobre-mim" class="section">
+        <div class="section-container">
+          <h2 class="section-title">Sobre Mim</h2>
+          <div class="about-content">
+            <p>
+              Desenvolvedora de software em início de carreira, apaixonada por
+              transformar ideias em realidade digital. Meu foco inicial está no
+              Front-End, onde construo experiências de usuários fluídas e
+              responsivas.
+            </p>
+
+            <p>
+              Estou em constante aprimoramento, buscando expandir minhas
+              habilidades para o Back-End com o objetivo de me tornar
+              Full-Stack.
+            </p>
+
+            <p>
+              Sou proativa, aprendo rápido e encaro cada novo desafio como uma
+              oportunidade de melhoria contínua. Meu Compromisso: Entregar
+              código de qualidade e evoluir a cada projeto.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção "Skills", com uma classe 'primary-bg' para um fundo diferente. -->
+      <section id="skills" class="section primary-bg">
+        <div class="section-container">
+          <h2 class="section-title">Skills</h2>
+          <div class="skills-content">
+            <p>
+              Sou uma aspirante a Desenvolvedora Fullstack, atualmente cursando
+              Engenharia de Software e extremamente dedicada à minha jornada de
+              aprendizado.
+            </p>
+
+            <p>
+              Minha base de estudos concentra-se no Front-end, mas minha paixão
+              por entender a arquitetura completa me impulsiona a buscar
+              conhecimentos em Back-end.
+            </p>
+
+            <p>
+              Sou proativa por natureza, gosto de desafios e busco ativamente o
+              conhecimento diário para me manter atualizada. Estou pronta para
+              mergulhar em um ambiente profissional e contribuir com minha
+              energia e foco total no desenvolvimento de soluções.
+            </p>
+
+            <div class="skill-list-container">
+              <h3>Tecnologias Foco:</h3>
+              <br />
+              <ul class="skill-list">
+                <!-- Ícones da Font Awesome (tag <i>) são usados para ilustrar cada tecnologia. -->
+                <li><i class="fab fa-html5"></i> HTML5</li>
+                <li><i class="fab fa-css3-alt"></i> CSS3</li>
+                <li><i class="fab fa-js-square"></i> JavaScript (ES6+)</li>
+                <li>
+                  <i class="fas fa-search-dollar"></i> Busca por Conhecimento
+                  Back-end
+                </li>
+                <li>
+                  <i class="fas fa-tools"></i> Proatividade e Resolução de
+                  Problemas
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção "Projetos". -->
+      <section id="projetos" class="section">
+        <div class="section-container">
+          <h2 class="section-title">Projetos</h2>
+          <!-- Container principal do carrossel de projetos. -->
+          <div class="carousel-container">
+            <!-- Botão para navegar para o item anterior do carrossel. O atributo 'data-carousel' pode ser usado pelo JavaScript para identificar qual carrossel controlar. -->
+            <button class="carousel-arrow prev-arrow" data-carousel="projetos">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <!-- Wrapper que esconde o overflow dos itens do carrossel. -->
+            <div class="carousel-wrapper">
+              <!-- O trilho do carrossel que contém todos os itens e se move horizontalmente. -->
+              <div
+                class="project-grid carousel-track"
+                data-carousel-track="projetos"
+              >
+                <!-- Projeto 1 -->
+                <!-- Cada 'project-card' é um item do carrossel. -->
+                <div class="project-card carousel-item">
+                  <a
+                    href="https://edileneermano-crypto.github.io/Audiobook-DomCasmurro/"
+                    target="_blank"
+                    class="project-link-wrapper"
+                  >
+                    <!-- Imagem de placeholder temporária. -->
+                    <img
+                      src="imagens/Projetos/DomCasmurro.png"
+                      alt="AudioBook Dom
+                    Casmurro"
+                      class="project-image"
+                    />
+                    <div class="project-text-content">
+                      <h3>AudioBook Dom Casmurro</h3>
+                      <p>
+                        Desenvolvimento de um player de áudio para audiolivro,
+                        com foco em usabilidade e design minimalista.
+                      </p>
+                      <span class="project-link">Ver Projeto &rarr;</span>
+                    </div>
+                  </a>
+                </div>
+                <!-- Projeto 2 -->
+                <div class="project-card carousel-item">
+                  <a
+                    href="https://edileneermano-crypto.github.io/imersao-dev/"
+                    target="_blank"
+                    class="project-link-wrapper"
+                  >
+                    <img
+                      src="imagens/Projetos/Alura.png"
+                      alt="Site - Alura (Mockup)"
+                      class="project-image"
+                    />
+                    <div class="project-text-content">
+                      <h3>Site - Alura (Mockup)</h3>
+                      <p>
+                        Reprodução e melhoria de layouts de sites para prática
+                        de HTML/CSS e responsividade.
+                      </p>
+                      <span class="project-link">Ver Projeto &rarr;</span>
+                    </div>
+                  </a>
+                </div>
+                <!-- Projeto 3 -->
+                <div class="project-card carousel-item">
+                  <a href="#" target="_blank" class="project-link-wrapper">
+                    <img
+                      src="imagens/Projetos/Tecnico Segurança do Trabalho.png"
+                      alt="WebSite - Portifólio Técnico de Segurança do Trabalho"
+                      class="project-image"
+                    />
+                    <div class="project-text-content">
+                      <h3>
+                        WebSite - Portifólio Técnico de Segurança do Trabalho
+                      </h3>
+                      <p>
+                        Aplicação de Front-end com funcionalidade de busca e
+                        filtro em tempo real.
+                      </p>
+                      <span class="project-link">Ver Projeto &rarr;</span>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="project-card carousel-item">
+                  <a href="#" target="_blank" class="project-link-wrapper">
+                    <!-- Imagem de placeholder temporária. -->
+                    <img
+                      src="imagens/Projetos/Confecção de Doces.png"
+                      alt="WebSite -
+                    Doces"
+                      class="project-image"
+                    />
+                    <div class="project-text-content">
+                      <h3>WebSite - Confecção de Doces</h3>
+                      <p>
+                        WebSite para divulgação dos serviços autonomos de uma
+                        confeiteira.
+                      </p>
+                      <span class="project-link">Ver Projeto &rarr;</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Botão para navegar para o próximo item do carrossel. -->
+            <button class="carousel-arrow next-arrow" data-carousel="projetos">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção "Certificações", também usando um carrossel. -->
+      <section id="certificacoes" class="section primary-bg">
+        <div class="section-container">
+          <h2 class="section-title">Certificações</h2>
+          <div class="carousel-container">
+            <button
+              class="carousel-arrow prev-arrow"
+              data-carousel="certificacoes"
+            >
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="carousel-wrapper">
+              <div
+                class="certification-grid carousel-track"
+                data-carousel-track="certificacoes"
+              >
+                <!-- Certificado 1 -->
+                <div class="cert-item carousel-item">
+                  <a
+                    href="imagens/Certificados/CERTIFICADO AKAD - FULLSTACK DEVELOPER_page-0001.jpg"
+                    target="_blank"
+                    class="cert-link-wrapper"
+                  >
+                    <img
+                      src="imagens/Certificados/CERTIFICADO AKAD - FULLSTACK DEVELOPER_page-0001.jpg"
+                      alt="Certificado Akad"
+                      class="cert-image"
+                    />
+                    <div class="cert-text-content">
+                      <h3>Akad - Fullstack Developer</h3>
+                      <p>Bootcamp com 79 horas, concluído em Nov/2025.</p>
+                    </div>
+                  </a>
+                </div>
+                <!-- Certificado 2 -->
+                <div class="cert-item carousel-item">
+                  <a href="#" target="_blank" class="cert-link-wrapper">
+                    <img
+                      src="imagens/Certificados/SANTANDER-CODE-GIRLS-2025.png"
+                      alt="Certificado Santander Code Girls"
+                      class="cert-image"
+                    />
+                    <div class="cert-text-content">
+                      <h3>Santander Code Girls - 2025</h3>
+                      <p>Bootcamp de 40 horas, concluído em Out/2025.</p>
+                    </div>
+                  </a>
+                </div>
+                <!-- Certificado 3 -->
+                <div class="cert-item carousel-item">
+                  <a href="#" target="_blank" class="cert-link-wrapper">
+                    <img
+                      src="imagens/Certificados/JAVASCRIPT-HASHTAG-CERTIFICADO.png"
+                      alt="Certificado Intensivão de JavaScript"
+                      class="cert-image"
+                    />
+                    <div class="cert-text-content">
+                      <h3>Intensivão de JavaScript</h3>
+                      <p>Certificação da Hashtag Treinamentos, 16/10/25.</p>
+                    </div>
+                  </a>
+                </div>
+                <!-- Certificado 4 -->
+                <div class="cert-item carousel-item">
+                  <a
+                    href="imagens/Certificados/NEXA - IA GENERATIVA.jpg"
+                    target="_blank"
+                    class="cert-link-wrapper"
+                  >
+                    <img
+                      src="imagens/Certificados/NEXA - IA GENERATIVA.jpg"
+                      alt="Certificado Nexa"
+                      class="cert-image"
+                    />
+                    <div class="cert-text-content">
+                      <h3>Nexa - IA Generativa Bedrock</h3>
+                      <p>Bootcamp com 9 horas, concluído em Dez/2025.</p>
+                    </div>
+                  </a>
+                </div>
+                <!-- Certificado 4 -->
+                <div class="cert-item carousel-item">
+                  <a
+                    href="imagens/Certificados/Alura-Edilene-Lino-Santos-Ermano.png"
+                    target="_blank"
+                    class="cert-link-wrapper"
+                  >
+                    <img
+                      src="imagens/Certificados/Alura-Edilene-Lino-Santos-Ermano.png"
+                      alt="Certificado Imersão Alura"
+                      class="cert-image"
+                    />
+                    <div class="cert-text-content">
+                      <h3>Alura - Front End - Básico</h3>
+                      <p>Imersão com 3 horas, concluído em Nov/2025.</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-arrow next-arrow"
+              data-carousel="certificacoes"
+            >
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção "Contato". -->
+      <section id="contato" class="section">
+        <div class="section-container">
+          <h2 class="section-title">Fale Comigo!</h2>
+          <!-- 
+            Formulário de contato configurado para usar o Formspree.
+            IMPORTANTE: O ID abaixo deve ser o seu ID único do Formspree, associado ao seu e-mail.
+          -->
+          <form
+            action="https://formspree.io/f/mgvgzkln"
+            method="POST"
+            class="contact-form"
+          >
+            <label for="name">Nome:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Escreva seu nome aqui"
+              required
+            />
+
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Escreva seu e-mail"
+              required
+            />
+
+            <label for="message">Mensagem:</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Escreva uma mensagem"
+              rows="6"
+              required
+            ></textarea>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- O <footer> representa o rodapé da página, geralmente com informações de copyright e links secundários. -->
+    <footer class="main-footer">
+      <p>&copy; 2025 Edilene Ermano</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/edilene-santos/" target="_blank">
+          <!-- O atributo 'target="_blank"' faz com que o link abra em uma nova aba. -->
+          <i class="fab fa-linkedin-in"></i
+        ></a>
+        <a href="https://github.com/edileneermano-crypto" target="_blank">
+          <i class="fab fa-github-alt"></i
+        ></a>
+      </div>
+    </footer>
+
+    <!-- Link para o arquivo JavaScript. É uma boa prática colocá-lo no final do <body> para que a página carregue o conteúdo visual primeiro. -->
+    <script src="script.js"></script>
+  </body>
+</html>

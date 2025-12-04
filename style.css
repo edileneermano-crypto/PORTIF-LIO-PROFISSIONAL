@@ -1,0 +1,551 @@
+/* 
+  Define variáveis de cores globais. Usar variáveis CSS (custom properties) 
+  facilita a manutenção do tema do site. Se precisar mudar uma cor, 
+  basta alterar o valor aqui.
+*/
+:root {
+  --bg-dark: #1a1a1a; /* Cinza Grafite Escuro */
+  --accent-purple: #a020f0; /* Roxo Neon */
+  --text-light: #f4f4f4; /* Quase Branco */
+  --bg-secondary: #2c2c2c; /* Um cinza um pouco mais claro para contraste */
+}
+
+/* --- BASE E RESET --- */
+/* O seletor universal (*) aplica estas regras a TODOS os elementos. */
+* {
+  margin: 0; /* Remove margens padrão do navegador. */
+  padding: 0; /* Remove preenchimentos padrão do navegador. */
+  box-sizing: border-box; /* Faz com que padding e border não aumentem o tamanho final do elemento. */
+  scroll-behavior: smooth; /* Anima a rolagem ao clicar em links de âncora (ex: <a href="#contato">). */
+}
+
+/* Estilos aplicados ao corpo da página. */
+body {
+  font-family: "Montserrat", sans-serif; /* Define a fonte principal. */
+  background-color: var(--bg-dark); /* Usa a variável de cor para o fundo. */
+  color: var(--text-light); /* Usa a variável para a cor do texto padrão. */
+  line-height: 1.6; /* Define a altura da linha para melhor legibilidade. */
+}
+
+/* --- ESTILOS GLOBAIS DE SEÇÃO --- */
+/* Classe genérica para todas as seções principais da página. */
+.section {
+  padding: 80px 50px; /* Espaçamento interno (vertical e horizontal). */
+  min-height: 100vh; /* Garante que cada seção ocupe pelo menos a altura inteira da tela. */
+}
+
+/* Modificador de fundo para seções alternadas. */
+.primary-bg {
+  background-color: var(--bg-secondary);
+}
+
+/* Container para centralizar o conteúdo dentro de uma seção. */
+.section-container {
+  max-width: 1200px; /* Largura máxima do conteúdo. */
+  margin: 0 auto; /* Centraliza o container horizontalmente. */
+}
+
+/* Estilo padrão para os títulos de cada seção. */
+.section-title {
+  font-size: 2.5rem; /* Tamanho da fonte. */
+  font-weight: 800; /* Peso da fonte (negrito). */
+  color: var(--accent-purple); /* Cor de destaque. */
+  margin-bottom: 50px; /* Espaçamento abaixo do título. */
+  text-align: center; /* Centraliza o texto. */
+}
+
+/* --- CABEÇALHO E NAVEGAÇÃO --- */
+.main-header {
+  display: flex; /* Ativa o layout flexbox. */
+  justify-content: space-between; /* Coloca o logo em um lado e a navegação no outro. */
+  align-items: center; /* Alinha os itens verticalmente ao centro. */
+  padding: 20px 50px; /* Espaçamento interno. */
+  background-color: var(--bg-dark); /* Cor de fundo. */
+  position: fixed; /* Fixa o cabeçalho no topo da tela durante a rolagem. */
+  width: 100%; /* Ocupa toda a largura. */
+  z-index: 100; /* Garante que o cabeçalho fique acima de outros elementos. */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--accent-purple);
+}
+
+.nav-links {
+  list-style: none; /* Remove os marcadores de lista (bolinhas). */
+  display: flex; /* Coloca os itens da lista em linha. */
+}
+
+.nav-links li a {
+  color: var(--text-light);
+  text-decoration: none; /* Remove o sublinhado dos links. */
+  font-weight: 600;
+  margin-left: 30px; /* Espaçamento entre os links. */
+  transition: color 0.3s; /* Animação suave na mudança de cor. */
+}
+
+.nav-links li a:hover {
+  color: var(--accent-purple);
+}
+
+/* --- BOTÕES (CTAs - Call to Action) --- */
+/* Estilo base para todos os botões. */
+.btn {
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Animação suave para várias propriedades. */
+  border: 2px solid transparent; /* Borda inicial transparente. */
+}
+
+/* Estilo para o botão primário (destaque). */
+.btn-primary {
+  background-color: var(--accent-purple);
+  color: var(--text-light);
+  border-color: var(--accent-purple);
+}
+
+/* Efeito ao passar o mouse sobre o botão primário. */
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--accent-purple);
+}
+
+/* Estilo para o botão secundário (contorno). */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-light);
+  border-color: var(--text-light);
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-secondary);
+  border-color: var(--accent-purple);
+}
+
+/* --- SEÇÃO HOME/HERO --- */
+.hero-section {
+  position: relative; /* Necessário para o posicionamento do pseudo-elemento ::before. */
+  padding-top: 80px; /* Espaço para o cabeçalho fixo não sobrepor o conteúdo. */
+  min-height: 100vh; /* Altura mínima da tela. */
+  overflow: hidden; /* Esconde qualquer conteúdo que saia dos limites da seção. */
+}
+
+/* Pseudo-elemento para criar uma camada de fundo com imagem. */
+.hero-section::before {
+  content: ""; /* Obrigatório para pseudo-elementos. */
+  position: absolute; /* Posiciona em relação ao .hero-section. */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("fundo-circuito-roxo.jpg"); /* Imagem de fundo. */
+  background-size: cover; /* Faz a imagem cobrir todo o espaço. */
+  background-position: center; /* Centraliza a imagem. */
+  opacity: 0.15; /* Deixa a imagem de fundo sutil. */
+  z-index: 1; /* Coloca a imagem atrás do conteúdo (.hero-content). */
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  position: relative; /* Para que o z-index funcione. */
+  z-index: 5; /* Coloca o conteúdo na frente da imagem de fundo. */
+  height: calc(
+    100vh - 80px
+  ); /* Calcula a altura disponível, descontando o cabeçalho. */
+}
+
+.text-content {
+  max-width: 50%;
+}
+
+.text-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.tech-stack {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accent-purple);
+  margin-bottom: 40px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.image-placeholder {
+  width: 10;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.image-placeholder img {
+  max-height: 90vh;
+  width: auto;
+  object-fit: cover;
+  border-radius: 6px;
+  /* Borda e Sombra Neon para criar um efeito de brilho. */
+  border: 3px solid var(--accent-purple);
+  /* Sombra Neon uniforme ao redor da imagem */
+  box-shadow: 0 0 15px rgba(160, 32, 240, 0.7),
+    /* Sombra interna mais suave e uniforme */ 0 0 30px rgba(160, 32, 240, 0.5),
+    /* Sombra externa com mais difusão */ 0 0 60px rgba(160, 32, 240, 0.3); /* Sombra mais espalhada para um brilho mais amplo */
+
+  transition: all 0.3s ease-in-out;
+  /* Removi o transform: translateY(-5px); para que a sombra seja simétrica */
+}
+
+/* Efeito de hover na imagem, intensificando o brilho. */
+.image-placeholder img:hover {
+  transform: scale(1.01); /* Leve aumento no hover */
+  box-shadow: 0 0 20px rgba(160, 32, 240, 0.9), 0 0 40px rgba(160, 32, 240, 0.7),
+    0 0 80px rgba(160, 32, 240, 0.5);
+}
+
+/* --- SEÇÃO SOBRE MIM --- */
+.about-content p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* --- SEÇÃO SKILLS --- */
+.skills-content {
+  text-align: center;
+}
+
+.skills-content p {
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  font-size: 1.1rem;
+}
+
+.skill-list-container {
+  margin-top: 40px;
+}
+
+.skill-list h3 {
+  color: var(--accent-purple);
+  margin-bottom: 20px;
+}
+
+.skill-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.skill-list li {
+  background-color: var(--bg-dark);
+  padding: 15px 30px;
+  border-radius: 5px;
+  border: 1px solid var(--accent-purple);
+  color: var(--accent-purple);
+  font-weight: 600;
+  transition: transform 0.3s;
+}
+
+.skill-list li:hover {
+  transform: translateY(-5px);
+  background-color: rgba(160, 32, 240, 0.1);
+}
+
+/* --- SEÇÃO PROJETOS --- */
+/* Layout em grade para os projetos. */
+.project-grid {
+  display: grid; /* Usado aqui para o fallback caso o JS do carrossel falhe. */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Cria colunas responsivas. */
+  gap: 30px; /* Espaço entre os cards. */
+  margin-top: 50px;
+}
+
+.project-card {
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  border: 1px solid rgba(160, 32, 240, 0.4);
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  display: flex; /* Flexbox para alinhar o conteúdo interno. */
+  flex-direction: column; /* Organiza os itens em coluna (imagem, texto). */
+  overflow: hidden; /* Garante que a imagem não ultrapasse as bordas arredondadas. */
+}
+
+.project-card:hover {
+  border-color: var(--accent-purple);
+  box-shadow: 0 0 15px rgba(160, 32, 240, 0.6);
+  transform: translateY(-5px);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px; /* Altura fixa para as imagens dos projetos */
+  object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+  display: block;
+}
+
+.project-text-content {
+  padding: 25px; /* Espaçamento interno da área de texto. */
+  flex-grow: 1; /* Faz o conteúdo de texto ocupar o espaço restante */
+  display: flex;
+  flex-direction: column; /* Para que o <p> possa crescer e empurrar o link para baixo. */
+}
+
+.project-card h3 {
+  color: var(--accent-purple);
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.project-card p {
+  flex-grow: 1; /* Faz o parágrafo crescer e empurrar o link "Ver Projeto" para baixo. */
+}
+
+.project-link-wrapper {
+  text-decoration: none;
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-link-wrapper .project-link {
+  color: var(--text-light);
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 15px;
+  transition: color 0.3s;
+}
+
+/* Garante que o efeito hover só se aplique ao link de texto do projeto */
+.project-link-wrapper:hover span.project-link {
+  color: var(--accent-purple);
+}
+
+/* --- SEÇÃO CERTIFICAÇÕES --- */
+.certification-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.cert-item {
+  background-color: var(--bg-dark);
+  border-radius: 8px;
+  border: 1px dashed var(--accent-purple);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cert-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px rgba(160, 32, 240, 0.5);
+}
+
+.cert-link-wrapper {
+  text-decoration: none;
+  color: var(--text-light);
+  display: block;
+}
+
+.cert-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 16/11; /* Proporção para manter consistência */
+  object-fit: cover;
+}
+
+.cert-text-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.cert-item h3 {
+  margin-bottom: 5px;
+  color: var(--accent-purple);
+}
+
+/* --- SEÇÃO CONTATO --- */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-weight: 600;
+  color: var(--accent-purple);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--bg-secondary);
+  border-radius: 5px;
+  color: var(--text-light);
+  font-size: 1rem;
+  font-family: inherit; /* Garante que a fonte seja a mesma do restante do site. */
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent-purple);
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* --- RODAPÉ --- */
+.main-footer {
+  text-align: center;
+  padding: 30px 50px;
+  border-top: 1px solid var(--bg-secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-links a {
+  color: var(--text-light);
+  font-size: 1.5rem;
+  margin-left: 20px;
+  transition: color 0.3s;
+}
+
+/* Garante que nenhum texto ou pseudo-elemento extra apareça nos links de ícones sociais */
+.social-links a span {
+  display: none;
+}
+.social-links a:hover {
+  color: var(--accent-purple);
+}
+
+/* --- RESPONSIVIDADE (Media Queries) --- */
+/* Estilos para telas com largura máxima de 768px (tablets e celulares). */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 100px;
+  }
+  .text-content,
+  .image-placeholder {
+    max-width: 100%;
+    width: 100%;
+  }
+  .image-placeholder {
+    order: -1; /* Coloca a imagem acima no mobile */
+    margin-bottom: 40px;
+    justify-content: center;
+  }
+  .image-placeholder img {
+    max-height: 40vh;
+  }
+  .main-header {
+    flex-direction: column;
+  }
+  .nav-links {
+    margin-top: 10px;
+  }
+}
+
+/* --- ESTILOS DO CARROSSEL --- */
+/* Container principal do carrossel. */
+.carousel-container {
+  position: relative; /* Para posicionar as setas em relação a ele. */
+}
+
+/* Wrapper que esconde os itens que estão fora da área visível. */
+.carousel-wrapper {
+  overflow: hidden; /* A mágica do carrossel acontece aqui, escondendo o que não deve ser visto. */
+  width: 100%;
+  position: relative;
+}
+
+/* O "trilho" que contém todos os itens e que será movido pelo JavaScript. */
+.carousel-track {
+  display: flex; /* Coloca todos os itens do carrossel em uma única linha. */
+  transition: transform 0.5s ease-in-out; /* Anima o movimento do trilho. */
+}
+
+.carousel-item {
+  flex: 0 0 100%; /* Cada item ocupa 100% do contêiner */
+  box-sizing: border-box;
+  /* Adiciona um pouco de espaço entre os itens quando mais de um é visível */
+  padding: 0 15px;
+}
+
+/* Em telas maiores, mostra 3 itens por vez no carrossel. */
+@media (min-width: 768px) {
+  .project-grid.carousel-track .carousel-item {
+    flex: 0 0 calc(100% / 3); /* Mostra 3 itens de projeto */
+  }
+  .certification-grid.carousel-track .carousel-item {
+    flex: 0 0 calc(100% / 3); /* Mostra 3 itens de certificação */
+  }
+  /* Remove o padding dos itens para usar o gap do grid */
+  .project-grid.carousel-track .carousel-item,
+  .certification-grid.carousel-track .carousel-item {
+    padding: 0;
+  }
+}
+
+/* Estilo das setas de navegação do carrossel. */
+.carousel-arrow {
+  background-color: transparent;
+  border: 2px solid var(--accent-purple);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: absolute; /* Posicionamento absoluto em relação ao .carousel-container. */
+  top: 50%; /* Centraliza verticalmente. */
+  transform: translateY(-50%); /* Ajuste fino para a centralização vertical. */
+  z-index: 10;
+  color: var(--accent-purple);
+  font-size: 1.2rem;
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-arrow.prev-arrow {
+  left: -60px; /* Move a seta para fora, à esquerda */
+}
+
+.carousel-arrow.next-arrow {
+  right: -60px; /* Move a seta para fora, à direita */
+}
+
+.carousel-arrow:hover {
+  background-color: var(--accent-purple);
+  color: var(--text-light);
+}
