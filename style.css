@@ -461,56 +461,94 @@ body {
 
   /* --- CABEÇALHO --- */
   .main-header {
-    flex-direction: column; /* Empilha logo e navegação */
+    flex-direction: row; /* Empilha logo e navegação */
+    justify-content: space-between;
     padding: 15px 20px;
+    padding-top: 15px;
   }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
   .nav-links {
-    margin-top: 15px;
-    justify-content: center;
+    margin-top: 0;
+    justify-content: flex-end;
     width: 100%;
   }
   .nav-links li a {
-    margin: 0 10px; /* Reduz o espaçamento entre os links */
+    margin: 0 5px; /* Reduz o espaçamento entre os links */
+    font-size: 0.75rem;
   }
 
   /* --- SEÇÃO HERO --- */
   .hero-section {
     min-height: auto; /* Permite que a altura se ajuste ao conteúdo */
-    padding-top: 120px; /* Mais espaço para o cabeçalho maior */
-    padding-bottom: 60px;
+    padding-top: 80px; /* Mais espaço para o cabeçalho maior */
+    padding-bottom: 30px;
   }
   .hero-content {
-    flex-direction: column-reverse; /* Imagem acima do texto */
-    text-align: center;
-    padding: 0 20px; /* Ajusta o padding lateral */
+    flex-direction: row; /* Imagem acima do texto */
+    text-align: left;
+    padding: 0 10px; /* Ajusta o padding lateral */
     height: auto; /* Remove a altura fixa */
   }
 
   .image-placeholder {
-    max-width: 250px; /* Limita o tamanho da imagem */
-    width: 70%;
-    margin: 0 auto 30px auto; /* Centraliza e adiciona margem inferior */
-    justify-content: center;
+    max-width: 40%; /* Limita o tamanho da imagem */
+    width: 40%;
+    margin: 0; /* Centraliza e adiciona margem inferior */
+    justify-content: flex-end;
   }
   .image-placeholder img {
-    max-height: none; /* Remove a restrição de altura */
+    max-height: 400px; /* Remove a restrição de altura */
     width: 100%;
+    box-shadow: none;
+    border: 2px solid var(--accent-purple);
   }
 
   .text-content {
-    max-width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 60%; /* Ocupa toda a largura disponível */
+    padding-right: 10px;
   }
   .text-content h1 {
-    font-size: 2rem; /* Reduz a fonte do título para evitar quebra */
+    font-size: 1.5rem; /* Reduz a fonte do título para evitar quebra */
+  }
+  .tech-stack {
+    font-size: 1rem;
+    margin-bottom: 10px;
   }
   .cta-buttons {
-    justify-content: center; /* Centraliza os botões */
+    justify-content: flex-start; /* Centraliza os botões */
+    gap: 8px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .cta-buttons .btn {
+    padding: 8px 10px;
+    font-size: 0.7rem;
   }
 
   /* --- RODAPÉ --- */
   .main-footer {
     flex-direction: column;
     gap: 15px;
+  }
+  .skill-list {
+    gap: 15px;
+  }
+  .skill-list li {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+  .carousel-item {
+    padding: 0 10px;
+  }
+  .carousel-arrow.prev-arrow {
+    left: 5px;
+  }
+  .carousel-arrow.next-arrow {
+    right: 5px;
   }
 }
 
