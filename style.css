@@ -31,7 +31,7 @@ body {
 /* Classe genérica para todas as seções principais da página. */
 .section {
   padding: 80px 50px; /* Espaçamento interno (vertical e horizontal). */
-  min-height: 100vh; /* Garante que cada seção ocupe pelo menos a altura inteira da tela. */
+  /* min-height: 100vh; */ /* Removido para um fluxo mais natural em diferentes telas */
 }
 
 /* Modificador de fundo para seções alternadas. */
@@ -182,7 +182,7 @@ body {
 }
 
 .image-placeholder {
-  width: 10;
+  max-width: 45%; /* Define uma largura máxima para o container da imagem */
   display: flex;
   justify-content: flex-end;
 }
@@ -450,29 +450,67 @@ body {
 /* --- RESPONSIVIDADE (Media Queries) --- */
 /* Estilos para telas com largura máxima de 768px (tablets e celulares). */
 @media (max-width: 768px) {
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
-    padding-top: 100px;
+  /* --- AJUSTES GERAIS --- */
+  .section {
+    padding: 60px 20px; /* Reduz o padding das seções */
   }
-  .text-content,
-  .image-placeholder {
-    max-width: 100%;
+  .section-title {
+    font-size: 2.2rem; /* Reduz o tamanho dos títulos */
+    margin-bottom: 30px;
+  }
+
+  /* --- CABEÇALHO --- */
+  .main-header {
+    flex-direction: column; /* Empilha logo e navegação */
+    padding: 15px 20px;
+  }
+  .nav-links {
+    margin-top: 15px;
+    justify-content: center;
     width: 100%;
   }
+  .nav-links li a {
+    margin: 0 10px; /* Reduz o espaçamento entre os links */
+  }
+
+  /* --- SEÇÃO HERO --- */
+  .hero-section {
+    min-height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    padding-top: 120px; /* Mais espaço para o cabeçalho maior */
+    padding-bottom: 60px;
+  }
+  .hero-content {
+    flex-direction: column-reverse; /* Imagem acima do texto */
+    text-align: center;
+    padding: 0 20px; /* Ajusta o padding lateral */
+    height: auto; /* Remove a altura fixa */
+  }
+
   .image-placeholder {
-    order: -1; /* Coloca a imagem acima no mobile */
-    margin-bottom: 40px;
+    max-width: 250px; /* Limita o tamanho da imagem */
+    width: 70%;
+    margin: 0 auto 30px auto; /* Centraliza e adiciona margem inferior */
     justify-content: center;
   }
   .image-placeholder img {
-    max-height: 40vh;
+    max-height: none; /* Remove a restrição de altura */
+    width: 100%;
   }
-  .main-header {
+
+  .text-content {
+    max-width: 100%; /* Ocupa toda a largura disponível */
+  }
+  .text-content h1 {
+    font-size: 2rem; /* Reduz a fonte do título para evitar quebra */
+  }
+  .cta-buttons {
+    justify-content: center; /* Centraliza os botões */
+  }
+
+  /* --- RODAPÉ --- */
+  .main-footer {
     flex-direction: column;
-  }
-  .nav-links {
-    margin-top: 10px;
+    gap: 15px;
   }
 }
 
