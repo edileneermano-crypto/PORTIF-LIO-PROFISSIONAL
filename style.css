@@ -468,17 +468,16 @@ body {
   }
 
   .logo {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .nav-links {
     margin-top: 0;
     justify-content: flex-end;
-    width: 100%;
   }
   .nav-links li a {
-    margin: 0 5px; /* Reduz o espaçamento entre os links */
-    font-size: 0.75rem;
+    margin: 0 4px; /* Reduz o espaçamento entre os links */
+    font-size: 0.7rem;
   }
 
   /* --- SEÇÃO HERO --- */
