@@ -664,12 +664,12 @@ body {
 
 .logo {
   font-size: 2rem; /*desktop*/
-  font-weight: 700;
+  font-weight: bold;
+  white-space: nowrap;
 }
 
 @media (max-width: 768px) {
   .logo {
     font-size: 1.4rem;
-    line-height: 1.2;
   }
 }
