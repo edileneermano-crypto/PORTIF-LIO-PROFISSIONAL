@@ -659,3 +659,17 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
+
+/* RESPONSIVIDADE PARA DIMINUIÇÃO DO LOGO, OU SEJA, MEU NOME */
+
+.logo {
+  font-size: 2rem; /*desktop*/
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 1.4rem;
+    line-height: 1.2;
+  }
+}
