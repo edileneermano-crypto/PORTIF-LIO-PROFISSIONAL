@@ -674,8 +674,7 @@ body {
   }
 }
 
-/* RESPONSIVIDADE PARA MANTER BOTÕES DIREITA/ESQUERDA */
-/* ===== CARROSSEL BASE ===== */
+/* RESPONSIVIDADE PARA MANTER BOTÕES DIREITA/ESQUERDA */ /* ===== CARROSSEL BASE (DESKTOP – NÃO MEXE) ===== */
 .carousel {
   position: relative;
   width: 100%;
@@ -684,65 +683,37 @@ body {
 .carousel-track {
   display: flex;
   gap: 16px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-}
-
-/* Esconde a barra de scroll (mobile) */
-.carousel-track::-webkit-scrollbar {
-  display: none;
 }
 
 .carousel-item {
-  min-width: 85%;
   background: #222;
   color: #fff;
   padding: 20px;
   border-radius: 12px;
-  scroll-snap-align: center;
-}
-
-/* ===== SETAS (DESKTOP) ===== */
-.carousel-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #7a1cff;
-  color: #fff;
-  border: none;
-  font-size: 24px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.prev-arrow {
-  left: -20px;
-}
-
-.next-arrow {
-  right: -20px;
 }
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
-  /* some as setas */
-  .carousel-arrow {
+  /* swipe horizontal */
+  .carousel-track {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* esconder barra de rolagem */
+  .carousel-track::-webkit-scrollbar {
     display: none;
   }
-}
 
-/* ===== DESKTOP ===== */
-@media (min-width: 769px) {
-  /* desativa swipe no desktop */
-  .carousel-track {
-    overflow-x: hidden;
+  /* tamanho dos cards no mobile */
+  .carousel-item {
+    min-width: 85%;
+    scroll-snap-align: center;
   }
 
-  .carousel-item {
-    min-width: 100%;
+  /* esconder setas no mobile */
+  .carousel-arrow {
+    display: none;
   }
 }
