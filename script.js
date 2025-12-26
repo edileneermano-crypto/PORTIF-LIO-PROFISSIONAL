@@ -80,21 +80,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Evento de clique para o botão "próximo".
     nextButton.addEventListener("click", () => {
+      // Incrementa o índice para ir para o próximo slide.
       currentIndex++;
       // Se chegar ao final, volta para o primeiro slide (efeito de loop).
       if (currentIndex > items.length - 1) {
         currentIndex = 0; // Volta para o início
       }
+      // Aplica a nova posição ao trilho do carrossel.
       setSlidePosition(currentIndex);
     });
 
     // Evento de clique para o botão "anterior".
     prevButton.addEventListener("click", () => {
+      // Decrementa o índice para ir para o slide anterior.
       currentIndex--;
       // Se estiver no primeiro e clicar para voltar, vai para o último slide (efeito de loop).
       if (currentIndex < 0) {
         currentIndex = items.length - 1; // Vai para o final
       }
+      // Aplica a nova posição ao trilho do carrossel.
       setSlidePosition(currentIndex);
     });
   }
@@ -104,4 +108,31 @@ document.addEventListener("DOMContentLoaded", () => {
   setupCarousel("certificacoes");
 
   // --- FIM: LÓGICA DO CARROSSEL ---
+});
+
+// PARTE DO ENVIADO MENSAGEM
+
+const form = document.getElementById("contactForm");
+const successMessage = document.getElementById("successMessage");
+
+form.addEventListener("submit", async function (event) {
+  event.preventDefault();
+
+  const formData = new FormData(form);
+
+  const response = await fetch(form.action, {
+    method: form.method,
+    body: formData,
+    headers: {
+      Accept: "application/json",
+    },
+  });
+
+  if (response.ok) {
+    form.style.display = "none";
+    successMessage.style.display = "block";
+    form.reset();
+  } else {
+    alert("❌ Ocorreu um erro ao enviar. Tente novamente.");
+  }
 });

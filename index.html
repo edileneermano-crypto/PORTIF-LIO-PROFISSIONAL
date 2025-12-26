@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- O título da página, que aparece na aba do navegador. -->
     <title>Edilene Ermano | Desenvolvedora Front-end</title>
+    <link rel="icon" href="imagens/Logo Meu Site.png" />
     <!-- Link para a folha de estilos CSS externa que define a aparência da página. -->
     <link rel="stylesheet" href="style.css" />
     <!-- Link para importar fontes customizadas do Google Fonts. -->
@@ -45,14 +46,15 @@
       <section id="home" class="hero-section">
         <div class="hero-content">
           <div class="text-content">
-            <h1>Desenvolvedora de Software | Front-end</h1>
-            <p class="tech-stack">HTML | CSS | JavaScript</p>
+            <h1>Desenvolvedora de Software | Full Stack</h1>
+            <p class="tech-stack">HTML | CSS | JavaScript | Python | SQL</p>
 
             <!-- Botões de Chamada para Ação (Call to Action). -->
             <div class="cta-buttons">
               <a
                 href="Currículo/Desenvolvedora_de_Software_Edilene_Ermano.pdf"
                 download
+                target="_blank"
                 class="btn btn-primary"
                 >Baixar CV</a
               >
@@ -170,7 +172,7 @@
                   >
                     <!-- Imagem de placeholder temporária. -->
                     <img
-                      src="imagens/Projetos/DomCasmurro.png"
+                      src="imagens/Projetos/Capa DomCasmurro.png"
                       alt="AudioBook Dom
                     Casmurro"
                       class="project-image"
@@ -209,9 +211,13 @@
                 </div>
                 <!-- Projeto 3 -->
                 <div class="project-card carousel-item">
-                  <a href="#" target="_blank" class="project-link-wrapper">
+                  <a
+                    href="https://joaocarlossegurancadotrabalho.netlify.app/"
+                    target="_blank"
+                    class="project-link-wrapper"
+                  >
                     <img
-                      src="imagens/Projetos/Tecnico Segurança do Trabalho.png"
+                      src="imagens/Projetos/Capa Pagina Segurança do trabalho.png"
                       alt="WebSite - Portifólio Técnico de Segurança do Trabalho"
                       class="project-image"
                     />
@@ -337,7 +343,7 @@
                     </div>
                   </a>
                 </div>
-                <!-- Certificado 4 -->
+                <!-- Certificado 5 -->
                 <div class="cert-item carousel-item">
                   <a
                     href="imagens/Certificados/Alura-Edilene-Lino-Santos-Ermano.png"
@@ -352,6 +358,48 @@
                     <div class="cert-text-content">
                       <h3>Alura - Front End - Básico</h3>
                       <p>Imersão com 3 horas, concluído em Nov/2025.</p>
+                    </div>
+                  </a>
+                </div>
+                <!-- Certificação 6 -->
+                <div class="cert-item carousel-item">
+                  <a
+                    href="imagens/Certificados/info Jr. Python.jpeg"
+                    target="_blank"
+                    class="cert-link-wrapper"
+                  >
+                    <img
+                      src="imagens/Certificados/info Jr. Python.jpeg"
+                      alt="Certificado Introduão a Programação"
+                      class="cert-image"
+                    />
+                    <div class="cert-text-content">
+                      <h3>Introdução a Programação</h3>
+                      <p>
+                        Certificação da Info Bio Jr. juntamente com a USP, 22,
+                        26/11/2025.
+                      </p>
+                    </div>
+                  </a>
+                </div>
+                <!-- certificação 7 -->
+                <div class="cert-item carousel-item">
+                  <a
+                    href="imagens/Certificados/DIO CAMPUS EXPERT.jpeg"
+                    target="_blank"
+                    class="cert-link-wrapper"
+                  >
+                    <img
+                      src="imagens/Certificados/DIO CAMPUS EXPERT.jpeg"
+                      alt="Certificado Dio Campus Expert"
+                      class="cert-image"
+                    />
+                    <div class="cert-text-content">
+                      <h3>Embaixadora Dio</h3>
+                      <p>
+                        Certificação Dio Campus Expert Turma 14 pela DIO,
+                        28/10/2025 a 12/12/2025.
+                      </p>
                     </div>
                   </a>
                 </div>
@@ -379,6 +427,7 @@
             action="https://formspree.io/f/mgvgzkln"
             method="POST"
             class="contact-form"
+            id="contactForm"
           >
             <label for="name">Nome:</label>
             <input
@@ -409,6 +458,11 @@
 
             <button type="submit" class="btn btn-primary">Enviar</button>
           </form>
+
+          <!-- MENSAGEM DE SUCESSO -->
+          <p class="success-message" id="successMessage">
+            💜 Mensagem enviada com sucesso! Em breve entrarei em contato.
+          </p>
         </div>
       </section>
     </main>
@@ -416,6 +470,7 @@
     <!-- O <footer> representa o rodapé da página, geralmente com informações de copyright e links secundários. -->
     <footer class="main-footer">
       <p>&copy; 2025 Edilene Ermano</p>
+      <p>Acesse minhas redes Sociais | Linkedin | GitHub</p>
       <div class="social-links">
         <a href="https://www.linkedin.com/in/edilene-santos/" target="_blank">
           <!-- O atributo 'target="_blank"' faz com que o link abra em uma nova aba. -->

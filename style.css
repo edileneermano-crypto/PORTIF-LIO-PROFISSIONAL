@@ -67,9 +67,9 @@ body {
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--accent-purple);
+  font-size: 1.5rem; /* Tamanho da fonte do logo. */
+  font-weight: 800; /* Peso da fonte (bem negrito). */
+  color: var(--accent-purple); /* Cor de destaque para o logo. */
 }
 
 .nav-links {
@@ -78,51 +78,51 @@ body {
 }
 
 .nav-links li a {
-  color: var(--text-light);
+  color: var(--text-light); /* Cor do texto dos links. */
   text-decoration: none; /* Remove o sublinhado dos links. */
-  font-weight: 600;
+  font-weight: 600; /* Peso da fonte (semi-negrito). */
   margin-left: 30px; /* Espaçamento entre os links. */
   transition: color 0.3s; /* Animação suave na mudança de cor. */
 }
 
 .nav-links li a:hover {
-  color: var(--accent-purple);
+  color: var(--accent-purple); /* Muda a cor do link ao passar o mouse. */
 }
 
 /* --- BOTÕES (CTAs - Call to Action) --- */
 /* Estilo base para todos os botões. */
 .btn {
-  text-decoration: none;
-  padding: 12px 25px;
-  border-radius: 5px;
-  font-weight: 600;
+  text-decoration: none; /* Remove o sublinhado (caso seja usado em uma tag <a>). */
+  padding: 12px 25px; /* Espaçamento interno do botão. */
+  border-radius: 5px; /* Bordas arredondadas. */
+  font-weight: 600; /* Peso da fonte. */
   transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Animação suave para várias propriedades. */
   border: 2px solid transparent; /* Borda inicial transparente. */
 }
 
 /* Estilo para o botão primário (destaque). */
 .btn-primary {
-  background-color: var(--accent-purple);
-  color: var(--text-light);
-  border-color: var(--accent-purple);
+  background-color: var(--accent-purple); /* Fundo com a cor de destaque. */
+  color: var(--text-light); /* Cor do texto. */
+  border-color: var(--accent-purple); /* Cor da borda. */
 }
 
 /* Efeito ao passar o mouse sobre o botão primário. */
 .btn-primary:hover {
-  background-color: transparent;
-  color: var(--accent-purple);
+  background-color: transparent; /* Fundo fica transparente. */
+  color: var(--accent-purple); /* Texto assume a cor de destaque. */
 }
 
 /* Estilo para o botão secundário (contorno). */
 .btn-secondary {
-  background-color: transparent;
-  color: var(--text-light);
-  border-color: var(--text-light);
+  background-color: transparent; /* Fundo transparente. */
+  color: var(--text-light); /* Cor do texto. */
+  border-color: var(--text-light); /* Cor da borda. */
 }
 
 .btn-secondary:hover {
-  background-color: var(--bg-secondary);
-  border-color: var(--accent-purple);
+  background-color: var(--bg-secondary); /* Muda a cor de fundo no hover. */
+  border-color: var(--accent-purple); /* Muda a cor da borda no hover. */
 }
 
 /* --- SEÇÃO HOME/HERO --- */
@@ -149,10 +149,10 @@ body {
 }
 
 .hero-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 50px;
+  display: flex; /* Ativa o flexbox para alinhar texto e imagem lado a lado. */
+  align-items: center; /* Alinha verticalmente o texto e a imagem. */
+  justify-content: space-between; /* Espaçamento máximo entre texto e imagem. */
+  padding: 0 50px; /* Espaçamento lateral para não colar nas bordas. */
   position: relative; /* Para que o z-index funcione. */
   z-index: 5; /* Coloca o conteúdo na frente da imagem de fundo. */
   height: calc(
@@ -161,30 +161,30 @@ body {
 }
 
 .text-content {
-  max-width: 50%;
+  max-width: 50%; /* Limita a largura do container de texto. */
 }
 
 .text-content h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 3rem; /* Tamanho da fonte do título principal. */
+  margin-bottom: 10px; /* Espaço abaixo do título. */
 }
 
 .tech-stack {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--accent-purple);
-  margin-bottom: 40px;
+  font-size: 1.5rem; /* Tamanho da fonte do subtítulo de tecnologias. */
+  font-weight: 600; /* Peso da fonte. */
+  color: var(--accent-purple); /* Cor de destaque. */
+  margin-bottom: 40px; /* Espaço abaixo do subtítulo. */
 }
 
 .cta-buttons {
-  display: flex;
-  gap: 20px;
+  display: flex; /* Alinha os botões em linha. */
+  gap: 20px; /* Espaço entre os botões. */
 }
 
 .image-placeholder {
   max-width: 45%; /* Define uma largura máxima para o container da imagem */
-  display: flex;
-  justify-content: flex-end;
+  display: flex; /* Usa flexbox para controle de alinhamento. */
+  justify-content: flex-end; /* Alinha a imagem à direita do seu container. */
 }
 
 .image-placeholder img {
@@ -212,17 +212,17 @@ body {
 
 /* --- SEÇÃO SOBRE MIM --- */
 .about-content p {
-  margin-bottom: 20px;
-  font-size: 1.1rem;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+  margin-bottom: 20px; /* Espaço entre os parágrafos. */
+  font-size: 1.1rem; /* Tamanho da fonte para boa legibilidade. */
+  max-width: 900px; /* Largura máxima para o texto não ficar muito extenso. */
+  margin-left: auto; /* Usado com margin-right para centralizar o bloco de texto. */
+  margin-right: auto; /* Usado com margin-left para centralizar o bloco de texto. */
+  text-align: center; /* Alinha o texto ao centro. */
 }
 
 /* --- SEÇÃO SKILLS --- */
 .skills-content {
-  text-align: center;
+  text-align: center; /* Centraliza todo o conteúdo da seção. */
 }
 
 .skills-content p {
@@ -232,30 +232,30 @@ body {
 }
 
 .skill-list-container {
-  margin-top: 40px;
+  margin-top: 40px; /* Espaço acima da lista de skills. */
 }
 
 .skill-list h3 {
-  color: var(--accent-purple);
-  margin-bottom: 20px;
+  color: var(--accent-purple); /* Cor de destaque para o subtítulo. */
+  margin-bottom: 20px; /* Espaço abaixo do subtítulo. */
 }
 
 .skill-list {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
+  display: flex; /* Alinha os itens da lista em linha. */
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se não houver espaço. */
+  justify-content: center; /* Centraliza os itens na linha. */
+  gap: 25px; /* Espaço entre os itens da lista. */
 }
 
 .skill-list li {
-  background-color: var(--bg-dark);
-  padding: 15px 30px;
-  border-radius: 5px;
-  border: 1px solid var(--accent-purple);
-  color: var(--accent-purple);
-  font-weight: 600;
-  transition: transform 0.3s;
+  background-color: var(--bg-dark); /* Cor de fundo do item. */
+  padding: 15px 30px; /* Espaçamento interno. */
+  border-radius: 5px; /* Bordas arredondadas. */
+  border: 1px solid var(--accent-purple); /* Borda com cor de destaque. */
+  color: var(--accent-purple); /* Cor do texto. */
+  font-weight: 600; /* Peso da fonte. */
+  transition: transform 0.3s; /* Animação suave no hover. */
 }
 
 .skill-list li:hover {
@@ -293,9 +293,9 @@ body {
 
 .project-image {
   width: 100%;
-  height: 200px; /* Altura fixa para as imagens dos projetos */
-  object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
-  display: block;
+  height: 200px; /* Altura fixa para as imagens dos projetos, garantindo uniformidade. */
+  object-fit: cover; /* Garante que a imagem cubra a área definida sem distorcer sua proporção. */
+  display: block; /* Remove qualquer espaço extra abaixo da imagem. */
 }
 
 .project-text-content {
@@ -306,9 +306,9 @@ body {
 }
 
 .project-card h3 {
-  color: var(--accent-purple);
-  margin-bottom: 10px;
-  margin-top: 0;
+  color: var(--accent-purple); /* Cor de destaque para o título do projeto. */
+  margin-bottom: 10px; /* Espaço abaixo do título. */
+  margin-top: 0; /* Remove a margem superior padrão do h3. */
 }
 
 .project-card p {
@@ -316,19 +316,19 @@ body {
 }
 
 .project-link-wrapper {
-  text-decoration: none;
-  color: var(--text-light);
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  text-decoration: none; /* Remove o sublinhado do link. */
+  color: var(--text-light); /* Define a cor do texto dentro do link. */
+  display: flex; /* Permite o uso de flexbox para o layout interno. */
+  flex-direction: column; /* Organiza o conteúdo do link (imagem, texto) em coluna. */
+  height: 100%; /* Faz o link ocupar toda a altura do card. */
 }
 
 .project-link-wrapper .project-link {
-  color: var(--text-light);
-  font-weight: 600;
-  display: inline-block;
-  margin-top: 15px;
-  transition: color 0.3s;
+  color: var(--text-light); /* Cor do texto do link "Ver Projeto". */
+  font-weight: 600; /* Peso da fonte. */
+  display: inline-block; /* Permite aplicar margem e outras propriedades de bloco. */
+  margin-top: 15px; /* Espaço acima do link. */
+  transition: color 0.3s; /* Animação suave da cor no hover. */
 }
 
 /* Garante que o efeito hover só se aplique ao link de texto do projeto */
@@ -338,10 +338,13 @@ body {
 
 /* --- SEÇÃO CERTIFICAÇÕES --- */
 .certification-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-top: 50px;
+  display: grid; /* Layout em grade. */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* Colunas responsivas. */
+  gap: 30px; /* Espaço entre os itens. */
+  margin-top: 50px; /* Espaço acima da grade. */
 }
 
 .cert-item {
@@ -358,27 +361,27 @@ body {
 }
 
 .cert-link-wrapper {
-  text-decoration: none;
-  color: var(--text-light);
-  display: block;
+  text-decoration: none; /* Remove sublinhado do link. */
+  color: var(--text-light); /* Cor do texto dentro do link. */
+  display: block; /* Faz o link ocupar todo o espaço do item. */
 }
 
 .cert-image {
-  width: 100%;
-  height: auto;
-  display: block;
+  width: 100%; /* Imagem ocupa toda a largura do card. */
+  height: auto; /* Altura se ajusta para manter a proporção. */
+  display: block; /* Remove espaço extra abaixo da imagem. */
   aspect-ratio: 16/11; /* Proporção para manter consistência */
   object-fit: cover;
 }
 
 .cert-text-content {
-  padding: 20px;
-  text-align: center;
+  padding: 20px; /* Espaçamento interno da área de texto. */
+  text-align: center; /* Centraliza o texto. */
 }
 
 .cert-item h3 {
-  margin-bottom: 5px;
-  color: var(--accent-purple);
+  margin-bottom: 5px; /* Espaço abaixo do título. */
+  color: var(--accent-purple); /* Cor de destaque para o título. */
 }
 
 /* --- SEÇÃO CONTATO --- */
@@ -391,8 +394,8 @@ body {
 }
 
 .contact-form label {
-  font-weight: 600;
-  color: var(--accent-purple);
+  font-weight: 600; /* Peso da fonte para os rótulos. */
+  color: var(--accent-purple); /* Cor de destaque para os rótulos. */
 }
 
 .contact-form input,
@@ -414,12 +417,36 @@ body {
 }
 
 .contact-form textarea {
-  resize: vertical;
+  resize: vertical; /* Permite que o usuário redimensione a área de texto apenas verticalmente. */
 }
 
 .contact-form button {
   margin-top: 10px;
   cursor: pointer;
+}
+
+.success-message {
+  display: none;
+  margin-top: 30px;
+  padding: 18px;
+  background: linear-gradient(135deg, #ede9fe, #f5f3ff);
+  color: #5b21b6;
+  border: 1px solid #a78bfa;
+  border-radius: 12px;
+  font-weight: 500;
+  text-align: center;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* --- RODAPÉ --- */
@@ -433,10 +460,10 @@ body {
 }
 
 .social-links a {
-  color: var(--text-light);
-  font-size: 1.5rem;
-  margin-left: 20px;
-  transition: color 0.3s;
+  color: var(--text-light); /* Cor dos ícones. */
+  font-size: 1.5rem; /* Tamanho dos ícones. */
+  margin-left: 20px; /* Espaço à esquerda de cada ícone. */
+  transition: color 0.3s; /* Animação suave da cor no hover. */
 }
 
 /* Garante que nenhum texto ou pseudo-elemento extra apareça nos links de ícones sociais */
@@ -444,7 +471,7 @@ body {
   display: none;
 }
 .social-links a:hover {
-  color: var(--accent-purple);
+  color: var(--accent-purple); /* Muda a cor do ícone no hover. */
 }
 
 /* --- RESPONSIVIDADE (Media Queries) --- */
@@ -455,8 +482,8 @@ body {
     padding: 60px 20px; /* Reduz o padding das seções */
   }
   .section-title {
-    font-size: 2.2rem; /* Reduz o tamanho dos títulos */
-    margin-bottom: 30px;
+    font-size: 2.2rem; /* Reduz o tamanho dos títulos para caber melhor. */
+    margin-bottom: 30px; /* Reduz o espaço abaixo dos títulos. */
   }
 
   /* --- CABEÇALHO --- */
@@ -468,16 +495,16 @@ body {
   }
 
   .logo {
-    font-size: 1.1rem;
+    font-size: 1.1rem; /* Reduz o tamanho da fonte do logo. */
   }
 
   .nav-links {
-    margin-top: 0;
-    justify-content: flex-end;
+    margin-top: 0; /* Remove a margem superior que poderia existir. */
+    justify-content: flex-end; /* Alinha os links à direita. */
   }
   .nav-links li a {
     margin: 0 4px; /* Reduz o espaçamento entre os links */
-    font-size: 0.7rem;
+    font-size: 0.7rem; /* Reduz o tamanho da fonte dos links. */
   }
 
   /* --- SEÇÃO HERO --- */
@@ -487,7 +514,7 @@ body {
     padding-bottom: 30px;
   }
   .hero-content {
-    flex-direction: row; /* Imagem acima do texto */
+    flex-direction: row; /* Mantém imagem e texto lado a lado. */
     text-align: left;
     padding: 0 10px; /* Ajusta o padding lateral */
     height: auto; /* Remove a altura fixa */
@@ -496,7 +523,7 @@ body {
   .image-placeholder {
     max-width: 40%; /* Limita o tamanho da imagem */
     width: 40%;
-    margin: 0; /* Centraliza e adiciona margem inferior */
+    margin: 0; /* Remove margens para controle mais preciso. */
     justify-content: flex-end;
   }
   .image-placeholder img {
@@ -508,37 +535,37 @@ body {
 
   .text-content {
     max-width: 60%; /* Ocupa toda a largura disponível */
-    padding-right: 10px;
+    padding-right: 10px; /* Pequeno espaço entre o texto e a imagem. */
   }
   .text-content h1 {
     font-size: 1.5rem; /* Reduz a fonte do título para evitar quebra */
   }
   .tech-stack {
-    font-size: 1rem;
-    margin-bottom: 10px;
+    font-size: 1rem; /* Reduz a fonte do subtítulo. */
+    margin-bottom: 10px; /* Reduz o espaço abaixo. */
   }
   .cta-buttons {
-    justify-content: flex-start; /* Centraliza os botões */
-    gap: 8px;
+    justify-content: flex-start; /* Alinha os botões à esquerda. */
+    gap: 8px; /* Reduz o espaço entre os botões. */
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permite que os botões quebrem a linha se necessário. */
   }
   .cta-buttons .btn {
-    padding: 8px 10px;
-    font-size: 0.7rem;
+    padding: 8px 10px; /* Reduz o padding dos botões. */
+    font-size: 0.7rem; /* Reduz a fonte dos botões. */
   }
 
   /* --- RODAPÉ --- */
   .main-footer {
-    flex-direction: column;
-    gap: 15px;
+    flex-direction: column; /* Empilha os elementos do rodapé. */
+    gap: 15px; /* Adiciona espaço entre os elementos empilhados. */
   }
   .skill-list {
-    gap: 15px;
+    gap: 15px; /* Reduz o espaço entre os itens de skill. */
   }
   .skill-list li {
-    padding: 10px 15px;
-    font-size: 0.9rem;
+    padding: 10px 15px; /* Reduz o padding dos itens. */
+    font-size: 0.9rem; /* Reduz a fonte dos itens. */
   }
   .carousel-item {
     padding: 0 10px;
@@ -623,4 +650,12 @@ body {
 .carousel-arrow:hover {
   background-color: var(--accent-purple);
   color: var(--text-light);
+}
+
+/* RESPONSIVIDADE PAR QUE NÃO HAJA MOVIMENTO LATERAL */
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
 }
