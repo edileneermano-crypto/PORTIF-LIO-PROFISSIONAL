@@ -158,15 +158,20 @@ body {
   height: calc(
     100vh - 80px
   ); /* Calcula a altura disponível, descontando o cabeçalho. */
+  gap: 20px; /*Garante um espaço minimo entre eles para não colidirem*/
 }
 
 .text-content {
-  max-width: 50%; /* Limita a largura do container de texto. */
+  max-width: 45%; /* Limita a largura do container de texto. */
+  flex-shrink: 0; /*Impede que o container de texto seja espremido pela imagem */
 }
 
 .text-content h1 {
   font-size: 3rem; /* Tamanho da fonte do título principal. */
   margin-bottom: 10px; /* Espaço abaixo do título. */
+  display: block;
+  overflow: hidden; /* Essencial para o efeito máquina de escrever */
+  white-space: normal; /* Permite que o texto quebre linha se bater na imagem */
 }
 
 .tech-stack {
@@ -182,15 +187,17 @@ body {
 }
 
 .image-placeholder {
-  max-width: 45%; /* Define uma largura máxima para o container da imagem */
+  max-width: 48%; /* Define uma largura máxima para o container da imagem */
   display: flex; /* Usa flexbox para controle de alinhamento. */
   justify-content: flex-end; /* Alinha a imagem à direita do seu container. */
+  align-items: center;
 }
 
 .image-placeholder img {
-  max-height: 90vh;
-  width: auto;
+  width: 115%; /* Em vez de auto, força ela a preencher o container de 45% */
+  max-height: 85vh; /* Reduzi um pouco para garantir que o brilho neon não corte */
   object-fit: cover;
+  object-position: center;
   border-radius: 6px;
   /* Borda e Sombra Neon para criar um efeito de brilho. */
   border: 3px solid var(--accent-purple);
