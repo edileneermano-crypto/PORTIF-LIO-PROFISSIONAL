@@ -53,13 +53,13 @@ document.addEventListener("DOMContentLoaded", () => {
   function setupCarousel(carouselId) {
     // Seleciona os elementos essenciais do carrossel usando atributos 'data-'.
     const track = document.querySelector(
-      `[data-carousel-track="${carouselId}"]`
+      `[data-carousel-track="${carouselId}"]`,
     );
     const nextButton = document.querySelector(
-      `.next-arrow[data-carousel="${carouselId}"]`
+      `.next-arrow[data-carousel="${carouselId}"]`,
     );
     const prevButton = document.querySelector(
-      `.prev-arrow[data-carousel="${carouselId}"]`
+      `.prev-arrow[data-carousel="${carouselId}"]`,
     );
 
     // 1. Garante que os elementos essenciais do carrossel existam antes de prosseguir.
@@ -136,3 +136,31 @@ form.addEventListener("submit", async function (event) {
     alert("❌ Ocorreu um erro ao enviar. Tente novamente.");
   }
 });
+
+//BOTÃO PARA DEFINIR TIPO DE TECNOLOGIA
+
+function filterProjects(type) {
+  const projects = document.querySelectorAll(".project");
+  const buttons = document.querySelectorAll("#projetos .filters button");
+
+  buttons.forEach((btn) => btn.classList.remove("active"));
+  event.target.classList.add("active");
+
+  projects.forEach((project) => {
+    project.style.display =
+      type === "all" || project.classList.contains(type) ? "block" : "none";
+  });
+}
+
+function filterCertificates(type) {
+  const certs = document.querySelectorAll(".certificate");
+  const buttons = document.querySelectorAll("#certificacoes .filters button");
+
+  buttons.forEach((btn) => btn.classList.remove("active"));
+  event.target.classList.add("active");
+
+  certs.forEach((cert) => {
+    cert.style.display =
+      type === "all" || cert.classList.contains(type) ? "block" : "none";
+  });
+}

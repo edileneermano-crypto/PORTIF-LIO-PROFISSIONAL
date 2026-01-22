@@ -1,5 +1,5 @@
 <!-- Declaração do tipo de documento, essencial para que o navegador renderize a página no modo padrão. -->
-<!DOCTYPE html>
+<!doctype html>
 <!-- A tag <html> é o elemento raiz de uma página HTML. O atributo 'lang' define o idioma do conteúdo, importante para acessibilidade e SEO. -->
 <html lang="pt-br">
   <!-- A tag <head> contém metadados (informações sobre o documento) que não são exibidos diretamente na página. -->
@@ -151,6 +151,13 @@
         <div class="section-container">
           <h2 class="section-title">Projetos</h2>
           <!-- Container principal do carrossel de projetos. -->
+          <div class="filters">
+            <button onclick="filterProjects('all')">Todos</button>
+            <button onclick="filterProjects('frontend')">Front-end</button>
+            <button onclick="filterProjects('backend')">Back-end</button>
+            <button onclick="filterProjects('fullstack')">Fullstack</button>
+          </div>
+
           <div class="carousel-container">
             <!-- Botão para navegar para o item anterior do carrossel. O atributo 'data-carousel' pode ser usado pelo JavaScript para identificar qual carrossel controlar. -->
             <button class="carousel-arrow prev-arrow" data-carousel="projetos">
@@ -165,7 +172,7 @@
               >
                 <!-- Projeto 1 -->
                 <!-- Cada 'project-card' é um item do carrossel. -->
-                <div class="project-card carousel-item">
+                <div class="project-card carousel-item project frontend">
                   <a
                     href="https://edileneermano-crypto.github.io/Audiobook-DomCasmurro/"
                     target="_blank"
@@ -189,7 +196,7 @@
                   </a>
                 </div>
                 <!-- Projeto 2 -->
-                <div class="project-card carousel-item">
+                <div class="project-card carousel-item project frontend">
                   <a
                     href="https://edileneermano-crypto.github.io/imersao-dev/"
                     target="_blank"
@@ -211,7 +218,7 @@
                   </a>
                 </div>
                 <!-- Projeto 3 -->
-                <div class="project-card carousel-item">
+                <div class="project-card carousel-item project frontend">
                   <a
                     href="https://joaocarlossegurancadotrabalho.netlify.app/"
                     target="_blank"
@@ -237,7 +244,7 @@
 
                 <!-- Projeto 4 -->
 
-                <div class="project-card carousel-item">
+                <div class="project-card carousel-item project frontend">
                   <a
                     href="https://edilenesermano.netlify.app/"
                     target="_blank"
@@ -262,7 +269,7 @@
 
                 <!-- Projeto 5 -->
 
-                <div class="project-card carousel-item">
+                <div class="project-card carousel-item project frontend">
                   <a href="#" target="_blank" class="project-link-wrapper">
                     <!-- Imagem de placeholder temporária. -->
                     <img
@@ -295,6 +302,21 @@
       <section id="certificacoes" class="section primary-bg">
         <div class="section-container">
           <h2 class="section-title">Certificações</h2>
+          <div class="filters">
+            <button onclick="filterCertificates('all')">Todos</button>
+            <button onclick="filterCertificates('frontend')">Front-end</button>
+            <button onclick="filterCertificates('backend')">Back-end</button>
+            <button onclick="filterCertificates('fullstack')">Fullstack</button>
+            <button onclick="filterCertificates('especialização')">
+              Especialização
+            </button>
+            <button onclick="filterCertificates('IA')">IA</button>
+            <button onclick="filterCertificates('cyber')">
+              Cibersegurança
+            </button>
+            <button onclick="filterCertificates('cloud')">Cloud</button>
+          </div>
+
           <div class="carousel-container">
             <button
               class="carousel-arrow prev-arrow"
@@ -308,7 +330,7 @@
                 data-carousel-track="certificacoes"
               >
                 <!-- Certificado 1 -->
-                <div class="cert-item carousel-item">
+                <div class="cert-item carousel-item certificate fullstack">
                   <a
                     href="imagens/Certificados/CERTIFICADO AKAD - FULLSTACK DEVELOPER_page-0001.jpg"
                     target="_blank"
@@ -326,7 +348,7 @@
                   </a>
                 </div>
                 <!-- Certificado 2 -->
-                <div class="cert-item carousel-item">
+                <div class="cert-item carousel-item certificate cloud">
                   <a href="#" target="_blank" class="cert-link-wrapper">
                     <img
                       src="imagens/Certificados/SANTANDER-CODE-GIRLS-2025.png"
@@ -340,7 +362,7 @@
                   </a>
                 </div>
                 <!-- Certificado 3 -->
-                <div class="cert-item carousel-item">
+                <div class="cert-item carousel-item certificate frontend">
                   <a href="#" target="_blank" class="cert-link-wrapper">
                     <img
                       src="imagens/Certificados/JAVASCRIPT-HASHTAG-CERTIFICADO.png"
@@ -354,7 +376,7 @@
                   </a>
                 </div>
                 <!-- Certificado 4 -->
-                <div class="cert-item carousel-item">
+                <div class="cert-item carousel-item certificate IA">
                   <a
                     href="imagens/Certificados/NEXA - IA GENERATIVA.jpg"
                     target="_blank"
@@ -372,7 +394,7 @@
                   </a>
                 </div>
                 <!-- Certificado 5 -->
-                <div class="cert-item carousel-item">
+                <div class="cert-item carousel-item certificate frontend">
                   <a
                     href="imagens/Certificados/Alura-Edilene-Lino-Santos-Ermano.png"
                     target="_blank"
@@ -390,7 +412,7 @@
                   </a>
                 </div>
                 <!-- Certificação 6 -->
-                <div class="cert-item carousel-item">
+                <div class="cert-item carousel-item certificate fullstack">
                   <a
                     href="imagens/Certificados/info Jr. Python.jpeg"
                     target="_blank"
@@ -411,7 +433,7 @@
                   </a>
                 </div>
                 <!-- certificação 7 -->
-                <div class="cert-item carousel-item">
+                <div class="cert-item carousel-item certificate especialização">
                   <a
                     href="imagens/Certificados/DIO CAMPUS EXPERT.jpeg"
                     target="_blank"
@@ -428,6 +450,44 @@
                         Certificação Dio Campus Expert Turma 14 pela DIO,
                         28/10/2025 a 12/12/2025.
                       </p>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Certificação 8 -->
+                <div class="cert-item carousel-item certificate cyber">
+                  <a
+                    href="imagens/Certificados/Certificado_-_Nivelamento.pdf"
+                    target="_blank"
+                    class="cert-link-wrapper"
+                  >
+                    <img
+                      src="imagens/Certificados/Certificado_-_Nivelamento.pdf.png"
+                      alt="Certificado Nivelamento Hackers do Bem"
+                      class="cert-image"
+                    />
+                    <div class="cert-text-content">
+                      <h3>Nivelamento Cibersegurança</h3>
+                      <p>Hackers do Bem.</p>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Certificação 9 -->
+                <div class="cert-item carousel-item certificate cyber">
+                  <a
+                    href="imagens/Certificados/Certificado_-_Bsico.pdf"
+                    target="_blank"
+                    class="cert-link-wrapper"
+                  >
+                    <img
+                      src="imagens/Certificados/Certificado_-_Bsico.pdf.png"
+                      alt="Certificado Básico Hackers do Bem"
+                      class="cert-image"
+                    />
+                    <div class="cert-text-content">
+                      <h3>Básico Cibersegurança</h3>
+                      <p>Hackers do Bem.</p>
                     </div>
                   </a>
                 </div>
