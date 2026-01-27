@@ -493,51 +493,6 @@ body {
   pointer-events: none;
 }
 
-/* RESPONSIVDADE */
-
-/* Ajustes para Dispositivos Móveis */
-@media (max-width: 768px) {
-  /* Garante que o container dos certificados empilhe os cards */
-  .certificacoes-container,
-  .carousel-container,
-  .section-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 10px;
-  }
-
-  /* Mantém o card com o visual padrão, sem achatar */
-  .cert-item,
-  .carousel-item {
-    width: 95% !important; /* Quase a tela toda para dar um respiro nas bordas */
-    max-width: 400px; /* Não deixa o card crescer demais em tablets */
-    margin: 0 auto;
-    display: block;
-    height: auto !important; /* Garante que a altura se ajuste ao conteúdo */
-  }
-
-  /* Ajusta as imagens dentro dos cards no mobile */
-  .cert-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px 8px 0 0; /* Arredonda só em cima */
-  }
-
-  /* Ajusta o texto abaixo da imagem no mobile */
-  .cert-text-content {
-    padding: 15px;
-    text-align: left; /* Melhora a leitura no celular */
-  }
-
-  /* Remove setas de carrossel se elas estiverem atrapalhando no mobile */
-  .carousel-prev,
-  .carousel-next {
-    display: none;
-  }
-}
-
 /* --- SEÇÃO CERTIFICAÇÕES --- */
 .certification-grid {
   display: grid; /* Layout em grade. */
