@@ -493,6 +493,27 @@ body {
   pointer-events: none;
 }
 
+/* RESPONSIVIDADE PARA OS CARDS PERMANCEREM NO MESMO TAMANHO */
+
+@media (max-width: 768px) {
+  /* Mantém o comportamento de arrastar para o lado que você já configurou */
+  .project-grid {
+    display: flex; /* Muda de grid para flex para permitir o scroll lateral */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding-bottom: 20px; /* Espaço para a barra de rolagem não colar no card */
+  }
+
+  .project-card {
+    /* O SEGREDO: Define um tamanho fixo para todos os cards no mobile */
+    flex: 0 0 300px; /* Não deixa esticar, não deixa encolher, trava em 300px */
+    min-height: 600px; /* Altura fixa para todos ficarem iguais */
+    height: 450px;
+    scroll-snap-align: start;
+  }
+}
+
 /* --- SEÇÃO CERTIFICAÇÕES --- */
 .certification-grid {
   display: grid; /* Layout em grade. */
