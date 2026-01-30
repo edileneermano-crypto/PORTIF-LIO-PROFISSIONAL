@@ -493,6 +493,24 @@ body {
   pointer-events: none;
 }
 
+/* RESPONSIVIDADE CARDS */
+
+@media (max-width: 480px) {
+  .project-grid {
+    /* Impede o grid de tentar criar colunas e foca em manter o tamanho */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    /* Força a largura fixa exata que você deseja */
+    width: 300px !important;
+    min-width: 300px;
+    margin: 0 auto; /* Centraliza o card na tela do celular */
+  }
+}
+
 /* --- SEÇÃO CERTIFICAÇÕES --- */
 .certification-grid {
   display: grid; /* Layout em grade. */
