@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const p = document.querySelector(".hero-content .text-content .tech-stack");
 
   // Define os textos que serão "digitados".
-  const h1Text = "Desenvolvedora Front-end em formação";
-  const pText = "HTML | CSS | JavaScript";
+  const h1Text = "Desenvolvedora Front-end";
+  const pText = "HTML | CSS | JavaScript | React | Tailwind CSS";
   const typingSpeed = 100; // Velocidade em milissegundos
 
   // Limpa o conteúdo original dos elementos para iniciar o efeito.
