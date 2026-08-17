@@ -1,4 +1,41 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+  /* ==========================================
+     MENU MOBILE
+     ========================================== */
+
+  const menuToggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".main-header nav");
+
+  if (menuToggle && nav) {
+    menuToggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+
+      const icon = menuToggle.querySelector("i");
+
+      if (nav.classList.contains("active")) {
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-xmark");
+      } else {
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+      }
+    });
+
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("active");
+
+        const icon = menuToggle.querySelector("i");
+
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+      });
+    });
+  }
+
   /* ==========================================
      01. EFEITO MÁQUINA DE ESCREVER
      ========================================== */
