@@ -1,783 +1,1186 @@
-<!-- Declaração do tipo de documento, essencial para que o navegador renderize a página no modo padrão. -->
 <!doctype html>
-<!-- A tag <html> é o elemento raiz de uma página HTML. O atributo 'lang' define o idioma do conteúdo, importante para acessibilidade e SEO. -->
 <html lang="pt-br">
-  <!-- A tag <head> contém metadados (informações sobre o documento) que não são exibidos diretamente na página. -->
-  <head>
-    <!-- Define o conjunto de caracteres para o documento, UTF-8 é o padrão e suporta a maioria dos caracteres. -->
-    <meta charset="UTF-8" />
-    <!-- Configura a 'viewport' para que o site seja responsivo e se adapte a diferentes tamanhos de tela, como em celulares. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- O título da página, que aparece na aba do navegador. -->
-    <title>Edilene Ermano | Desenvolvedora Front-end</title>
-    <link rel="icon" href="imagens/Logo Meu Site.png" />
-    <!-- Link para a folha de estilos CSS externa que define a aparência da página. -->
-    <link rel="stylesheet" href="style.css" />
-    <!-- Link para importar fontes customizadas do Google Fonts. -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Link para a biblioteca Font Awesome, que fornece ícones (como os de redes sociais e skills). -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-  </head>
-  <!-- A tag <body> contém todo o conteúdo visível da página web. -->
-  <body>
-    <!-- O <header> representa o cabeçalho da página, geralmente contendo o logo e a navegação principal. -->
-    <header class="main-header">
-      <div class="logo">Edilene Ermano</div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <!-- A tag <nav> define um conjunto de links de navegação. -->
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#sobremim">Sobre mim</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#certificacoes">Certificações</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
-    </header>
+  <title>Edilene Ermano | Analista de Dados</title>
 
-    <!-- A tag <main> define o conteúdo principal e único do documento. -->
-    <main>
-      <!-- Seção "Home" ou "Hero", a primeira coisa que o usuário vê. O 'id' permite a navegação interna (ex: <a href="#home">). -->
-      <section id="home" class="hero-section">
-        <div class="hero-content">
-          <div class="text-content">
-            <h1>Desenvolvedora Front-end</h1>
-            <p class="tech-stack">HTML | CSS | JavaScript | React | Tailwind CSS</p>
+  <link rel="icon" href="imagens/Logo/Logo Meu Site.png">
+  <link rel="stylesheet" href="style.css">
 
-            <div class="cta-buttons">
-              <a
-                href="Currículo/Desenvolvedora_Frontend_Edilene_Ermano.pdf"
-                download
-                target="_blank"
-                class="btn btn-primary"
-              >
-                Baixar CV
-              </a>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap"
+    rel="stylesheet"
+  >
 
-              <a href="#projetos" class="btn btn-secondary">Projetos</a>
-            </div>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+</head>
 
-            <div class="social-links">
-              <a
-                href="https://www.linkedin.com/in/edilene-santos/"
-                target="_blank"
-                aria-label="LinkedIn"
-              >
-                <i class="fab fa-linkedin-in"></i>
-              </a>
+<body>
 
-              <a
-                href="https://github.com/edileneermano-crypto"
-                target="_blank"
-                aria-label="GitHub"
-              >
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
-          </div>
+  <!-- ==========================================
+       HEADER / NAVEGAÇÃO
+       ========================================== -->
 
-          <div class="image-placeholder">
-            <img
-              src="imagens/Edilene Ermano.png"
-              alt="Edilene Ermano - Desenvolvedora sentada programando"
-            />
-          </div>
-        </div>
-      </section>
+  <header class="main-header">
+    <div class="logo">Edilene Ermano</div>
 
-      <!-- Seção "Sobre Mim". -->
-      <section id="sobremim" class="section">
-        <div class="section-container">
-          <h2 class="section-title">Sobre Mim</h2>
-          <div class="about-content">
-            <p>
-              Sou uma Desenvolvedora Front-end em formação, apaixonada por
-              transformar linhas de código em interfaces que encantam e
-              facilitam a vida do usuário. Meu foco principal é a criação de
-              experiências digitais responsivas, garantindo que o design seja
-              impecável tanto em computadores quanto em dispositivos móveis.
-            </p>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#sobremim">Sobre mim</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#certificacoes">Certificações</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            <p>
-              No que eu foco hoje:
-              <br />
-              • Interface e UX: Entendo que um bom código deve caminhar junto
-              com um design intuitivo. Trabalho para que cada botão e
-              espaçamento faça sentido para quem usa.
-              <br />• Stack Técnica: Atualmente, domino as bases do HTML, CSS e
-              JavaScript, focando em escrever código limpo e organizado. <br />•
-              Evolução Contínua: Além de desenvolver, dedico meu tempo a estudar
-              novas ferramentas e metodologias que otimizem a performance e a
-              acessibilidade das aplicações.
-            </p>
+  <main>
 
-            <p>
-              Acredito que a tecnologia é uma ferramenta poderosa de
-              transformação e estou em busca da minha primeira oportunidade para
-              aplicar meus conhecimentos em projetos reais, colaborar com
-              equipes criativas e continuar crescendo como profissional.
-            </p>
+    <!-- ==========================================
+         01. HOME / HERO
+         ========================================== -->
 
-            <p>Vamos construir algo incrível juntos?</p>
-          </div>
-        </div>
-      </section>
+    <section id="home" class="hero-section">
+      <div class="hero-content">
 
-      <!-- Seção "Skills", com uma classe 'primary-bg' para um fundo diferente. -->
-      <section id="skills" class="section primary-bg">
-        <div class="section-container">
-          <h2 class="section-title">Skills</h2>
-          <div class="skills-content">
-            <p class="skills-description">
-              Atualmente cursando <strong>Engenharia de Software</strong>, foco
-              minha dedicação em construir aplicações que unam performance e
-              design intuitivo. Minha base sólida está no
-              <strong>Front-end</strong>, mas minha paixão por entender a
-              arquitetura completa do sistema me impulsiona a buscar
-              conhecimentos contínuos em <strong>Back-end</strong> e boas
-              práticas de desenvolvimento.
-            </p>
+        <div class="text-content">
+          <h1>Analista de Dados</h1>
 
-            <div class="skill-category">
-              <h3>Core Stack</h3>
-              <ul class="skill-list">
-                <li><i class="fab fa-html5"></i> HTML5</li>
-                <li><i class="fab fa-css3-alt"></i> CSS3</li>
-                <li><i class="fab fa-js-square"></i> JavaScript (ES6+)</li>
-              </ul>
-            </div>
-
-            <div class="skill-category">
-              <h3>Evolução & Perfil</h3>
-              <ul class="skill-list">
-                <li><i class="fas fa-database"></i> Conhecimento Back-end</li>
-                <li><i class="fas fa-lightbulb"></i> Resolução de Problemas</li>
-                <li><i class="fas fa-rocket"></i> Proatividade</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Seção "Projetos". -->
-      <section id="projetos" class="section">
-        <div class="section-container">
-          <h2 class="section-title">Projetos</h2>
-          <!-- Container principal do carrossel de projetos. -->
-          <div class="filters">
-            <button onclick="filterProjects('all')">Todos</button>
-            <button onclick="filterProjects('frontend')">Front-end</button>
-            <button onclick="filterProjects('backend')">Back-end</button>
-            <button onclick="filterProjects('fullstack')">Fullstack</button>
-          </div>
-
-          <div class="carousel-container">
-            <!-- Botão para navegar para o item anterior do carrossel. O atributo 'data-carousel' pode ser usado pelo JavaScript para identificar qual carrossel controlar. -->
-            <button class="carousel-arrow prev-arrow" data-carousel="projetos">
-              <i class="fas fa-chevron-left"></i>
-            </button>
-            <!-- Wrapper que esconde o overflow dos itens do carrossel. -->
-            <div class="carousel-wrapper">
-              <!-- O trilho do carrossel que contém todos os itens e se move horizontalmente. -->
-              <div
-                class="project-grid carousel-track"
-                data-carousel-track="projetos"
-              >
-                <!-- PROJETO 1 -->
-                <div class="project-card carousel-item project frontend">
-                  <div class="project-image-container">
-                    <img
-                      src="imagens/Projetos/Capa AudioBook.png"
-                      alt="AudioBook Dom Casmurro"
-                      class="project-image"
-                    />
-                  </div>
-
-                  <div class="project-text-content">
-                    <h3>AudioBook Dom Casmurro</h3>
-                    <p class="project-description">
-                      Interface interativa de áudio desenvolvida com
-                      <strong>JavaScript puro</strong>. Foco em manipulação
-                      dinâmica do DOM, controle de reprodução e design
-                      responsivo para uma experiência de leitura imersiva.
-                    </p>
-
-                    <div class="project-links">
-                      <a
-                        href="https://github.com/edileneermano-crypto/Audiobook-DomCasmurro"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn-project secondary"
-                      >
-                        <i class="fab fa-github"></i> GitHub
-                      </a>
-                      <a
-                        href="https://edileneermano-crypto.github.io/Audiobook-DomCasmurro/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn-project primary"
-                      >
-                        <i class="fas fa-external-link-alt"></i> Demo
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- PROJETO 2 -->
-                <div class="project-card carousel-item project frontend">
-                  <div class="project-image-container">
-                    <img
-                      src="imagens/Projetos/Capa site Alura.png"
-                      alt="Site Alura Mockup"
-                      class="project-image"
-                    />
-                  </div>
-
-                  <div class="project-text-content">
-                    <h3>Spotify Clone - Alura</h3>
-                    <p class="project-description">
-                      Desenvolvimento de interface inspirada no Spotify durante
-                      a <strong>Imersão Front-end</strong>. Prática avançada de
-                      <strong>Flexbox e Grid Layout</strong>, com foco em
-                      componentes reutilizáveis e fidelidade ao design original.
-                    </p>
-
-                    <div class="project-links">
-                      <a
-                        href="https://github.com/edileneermano-crypto/imersao-dev"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn-project secondary"
-                      >
-                        <i class="fab fa-github"></i> GitHub
-                      </a>
-                      <a
-                        href="https://edileneermano-crypto.github.io/imersao-dev/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn-project primary"
-                      >
-                        <i class="fas fa-external-link-alt"></i> Demo
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- PROJETO 3 -->
-                <div class="project-card carousel-item project frontend">
-                  <div class="project-image-container">
-                    <img
-                      src="imagens/Projetos/Capa Segurança do Trabalho.png"
-                      alt="Portfólio Segurança do Trabalho"
-                      class="project-image"
-                    />
-                  </div>
-
-                  <div class="project-text-content">
-                    <h3>Portfólio Segurança do Trabalho</h3>
-                    <p class="project-description">
-                      Solução profissional com
-                      <strong>filtro de conteúdo em tempo real</strong> e
-                      arquitetura focada em conversão. Implementação de
-                      <strong>SEO otimizado</strong> e interface responsiva para
-                      prestação de serviços técnicos.
-                    </p>
-
-                    <div class="project-links">
-                      <a
-                        href="https://github.com/edileneermano-crypto/Portif-lio-Seguran-a-do-Trabalho"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn-project secondary"
-                      >
-                        <i class="fab fa-github"></i> GitHub
-                      </a>
-                      <a
-                        href="https://joaocarlossegurancadotrabalho.netlify.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn-project primary"
-                      >
-                        <i class="fas fa-external-link-alt"></i> Demo
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- projeto 4 -->
-
-                <div class="project-card carousel-item project frontend">
-                  <div class="project-image-container">
-                    <img
-                      src="imagens/Projetos/Capa Meu Site.png"
-                      alt="Meu Portfolio Profissional"
-                      class="project-image"
-                    />
-                  </div>
-
-                  <div class="project-text-content">
-                    <h3>Portfolio Profissional Premium</h3>
-                    <p class="project-description">
-                      Desenvolvimento de ecossistema pessoal com foco em
-                      <strong>Clean Code</strong> e performance. Interface
-                      moderna com <strong>design responsivo</strong>, filtragem
-                      dinâmica de projetos e navegação otimizada para
-                      dispositivos móveis.
-                    </p>
-
-                    <div class="project-links">
-                      <a
-                        href="https://github.com/edileneermano-crypto/PORTIF-LIO-PROFISSIONAL"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn-project secondary"
-                      >
-                        <i class="fab fa-github"></i> GitHub
-                      </a>
-                      <a
-                        href="https://edilenesermano.netlify.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn-project primary"
-                      >
-                        <i class="fas fa-external-link-alt"></i> Demo
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- projeto 5 -->
-
-                <div class="project-card carousel-item project frontend">
-                  <div class="project-image-container">
-                    <img
-                      src="imagens/Projetos/Capa Site Doces.png"
-                      alt="WebSite Confecção de Doces"
-                      class="project-image"
-                    />
-                  </div>
-                  <div class="project-text-content">
-                    <h3>E-commerce de Doces (Em Desenvolvimento)</h3>
-                    <p class="project-description">
-                      Landing Page comercial focada em
-                      <strong>conversão e catálogo digital</strong>. Aplicação
-                      de conceitos de UI/UX.
-                    </p>
-                    <div class="project-links">
-                      <a
-                        href="https://github.com/edileneermano-crypto"
-                        target="_blank"
-                        class="btn-project secondary"
-                        ><i class="fab fa-github"></i> GitHub</a
-                      >
-                      <a
-                        href="#"
-                        class="btn-project primary disabled"
-                        style="opacity: 0.6; cursor: not-allowed"
-                      >
-                        <i class="fas fa-hammer"></i> Em breve
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Projeto 6 -->
-
-                <div class="project-card carousel-item project frontend">
-                  <div class="project-image-container">
-                    <img
-                      src="imagens/Projetos/Formulário.png"
-                      alt="Sistema de Validação de Formulário"
-                      class="project-image"
-                    />
-                  </div>
-
-                  <div class="project-text-content">
-                    <h3>Sistema de Validação</h3>
-                    <p class="project-description">
-                      Interface de cadastro criada para praticar lógica de
-                      programação e estilização moderna. Destaques: Layout
-                      centralizado com Flexbox, uso de variáveis CSS e
-                      manipulação de DOM com JavaScript. Responsivo.
-                    </p>
-
-                    <div class="project-links">
-                      <a
-                        href="https://github.com/edileneermano-crypto/formulario01"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn-project secondary"
-                      >
-                        <i class="fab fa-github"></i> GitHub
-                      </a>
-                      <a
-                        href="https://edileneermano-crypto.github.io/formulario01/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn-project primary"
-                      >
-                        <i class="fas fa-external-link-alt"></i> Demo
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button class="carousel-arrow next-arrow" data-carousel="projetos">
-              <i class="fas fa-chevron-right"></i>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <!-- Seção "Certificações", também usando um carrossel. -->
-      <section id="certificacoes" class="section primary-bg">
-        <div class="section-container">
-          <h2 class="section-title">Certificações</h2>
-          <div class="filters">
-            <button onclick="filterCertificates('all')">Todos</button>
-            <button onclick="filterCertificates('frontend')">Front-end</button>
-            <button onclick="filterCertificates('backend')">Back-end</button>
-            <button onclick="filterCertificates('fullstack')">Fullstack</button>
-            <button onclick="filterCertificates('especialização')">
-              Especialização
-            </button>
-            <button onclick="filterCertificates('IA')">IA</button>
-            <button onclick="filterCertificates('cyber')">
-              Cibersegurança
-            </button>
-            <button onclick="filterCertificates('cloud')">Cloud</button>
-          </div>
-
-          <div class="carousel-container">
-            <button
-              class="carousel-arrow prev-arrow"
-              data-carousel="certificacoes"
-            >
-              <i class="fas fa-chevron-left"></i>
-            </button>
-            <div class="carousel-wrapper">
-              <div
-                class="certification-grid carousel-track"
-                data-carousel-track="certificacoes"
-              >
-                <!-- Certificado 1 -->
-                <div class="cert-item carousel-item certificate fullstack">
-                  <a
-                    href="imagens/Certificados/CERTIFICADO AKAD - FULLSTACK DEVELOPER_page-0001.jpg"
-                    target="_blank"
-                    class="cert-link-wrapper"
-                  >
-                    <img
-                      src="imagens/Certificados/CERTIFICADO AKAD - FULLSTACK DEVELOPER_page-0001.jpg"
-                      alt="Certificado Akad"
-                      class="cert-image"
-                    />
-                    <div class="cert-text-content">
-                      <h3>Akad - Fullstack Developer</h3>
-                      <p>
-                        Imersão técnica no desenvolvimento de aplicações
-                        escaláveis, integrando interfaces dinâmicas em React com
-                        ecossistemas robustos em C# e .NET. Foco em arquitetura
-                        MVC, consumo de APIs RESTful e persistência de dados,
-                        consolidando o domínio de ferramentas essenciais para o
-                        ciclo completo de desenvolvimento de software.
-                      </p>
-                    </div>
-                  </a>
-                </div>
-                <!-- Certificado 2 -->
-                <div class="cert-item carousel-item certificate cloud">
-                  <a href="#" target="_blank" class="cert-link-wrapper">
-                    <img
-                      src="imagens/Certificados/SANTANDER-CODE-GIRLS-2025.png"
-                      alt="Certificado Santander Code Girls"
-                      class="cert-image"
-                    />
-                    <div class="cert-text-content">
-                      <h3>Santander Code Girls - 2025</h3>
-                      <p>
-                        Especialização em computação em nuvem com foco na
-                        infraestrutura AWS, visando a preparação técnica para
-                        certificações globais. O estudo abrangeu desde
-                        fundamentos de arquitetura cloud e serviços essenciais
-                        (EC2, S3, IAM) até a implementação de soluções
-                        escaláveis e seguras, conectando o desenvolvimento de
-                        software às melhores práticas de Cloud Computing.
-                      </p>
-                    </div>
-                  </a>
-                </div>
-                <!-- Certificado 3 -->
-                <div class="cert-item carousel-item certificate frontend">
-                  <a href="#" target="_blank" class="cert-link-wrapper">
-                    <img
-                      src="imagens/Certificados/JAVASCRIPT-HASHTAG-CERTIFICADO.png"
-                      alt="Certificado Intensivão de JavaScript"
-                      class="cert-image"
-                    />
-                    <div class="cert-text-content">
-                      <h3>Intensivão de JavaScript</h3>
-                      <p>
-                        Desenvolvimento prático focado na construção de uma
-                        interface de áudio interativa (Audiobook Dom Casmurro).
-                        O treinamento abordou a manipulação dinâmica do DOM para
-                        controle de reprodução, lógica de eventos em JavaScript
-                        e estilização avançada, resultando em uma aplicação
-                        funcional com foco total na experiência do usuário e
-                        acessibilidade.
-                      </p>
-                    </div>
-                  </a>
-                </div>
-                <!-- Certificado 4 -->
-                <div class="cert-item carousel-item certificate IA">
-                  <a
-                    href="imagens/Certificados/NEXA - IA GENERATIVA.jpg"
-                    target="_blank"
-                    class="cert-link-wrapper"
-                  >
-                    <img
-                      src="imagens/Certificados/NEXA - IA GENERATIVA.jpg"
-                      alt="Certificado Nexa"
-                      class="cert-image"
-                    />
-                    <div class="cert-text-content">
-                      <h3>Nexa - IA Generativa Bedrock</h3>
-                      <p>
-                        Exploração técnica de modelos de IA Generativa, com foco
-                        na criação de prompts estratégicos e automação de fluxos
-                        de trabalho. O treinamento capacitou a utilização de
-                        inteligência artificial para otimização de conteúdo e
-                        desenvolvimento de soluções inteligentes, integrando as
-                        tendências mais modernas de tecnologia ao ecossistema de
-                        desenvolvimento.
-                      </p>
-                    </div>
-                  </a>
-                </div>
-                <!-- Certificado 5 -->
-                <div class="cert-item carousel-item certificate frontend">
-                  <a
-                    href="imagens/Certificados/Alura-Edilene-Lino-Santos-Ermano.png"
-                    target="_blank"
-                    class="cert-link-wrapper"
-                  >
-                    <img
-                      src="imagens/Certificados/Alura-Edilene-Lino-Santos-Ermano.png"
-                      alt="Certificado Imersão Alura"
-                      class="cert-image"
-                    />
-                    <div class="cert-text-content">
-                      <h3>Alura - Front End - Básico</h3>
-                      <p>
-                        Desenvolvimento prático de aplicações web fundamentadas
-                        na tríade HTML5, CSS3 e JavaScript. O treinamento focou
-                        na criação de um sistema de busca funcional, aplicando
-                        manipulação dinâmica do DOM, estilização moderna e
-                        lógica de filtragem de dados para entregar uma interface
-                        interativa e responsiva.
-                      </p>
-                    </div>
-                  </a>
-                </div>
-                <!-- Certificação 6 -->
-                <div class="cert-item carousel-item certificate fullstack">
-                  <a
-                    href="imagens/Certificados/info Jr. Python.jpeg"
-                    target="_blank"
-                    class="cert-link-wrapper"
-                  >
-                    <img
-                      src="imagens/Certificados/info Jr. Python.jpeg"
-                      alt="Certificado Introduão a Programação"
-                      class="cert-image"
-                    />
-                    <div class="cert-text-content">
-                      <h3>Introdução a Programação</h3>
-                      <p>
-                        Sólida base em lógica de programação e algoritmos,
-                        explorando a sintaxe versátil do Python em paralelo com
-                        fundamentos de JavaScript. O curso, chancelado pela Info
-                        Bio Jr. (USP), capacitou a resolução de problemas
-                        estruturados e o entendimento de paradigmas
-                        fundamentais, essenciais para o aprendizado de novas
-                        tecnologias e desenvolvimento de scripts inteligentes.
-                      </p>
-                    </div>
-                  </a>
-                </div>
-                <!-- certificação 7 -->
-                <div class="cert-item carousel-item certificate especialização">
-                  <a
-                    href="imagens/Certificados/DIO CAMPUS EXPERT.jpeg"
-                    target="_blank"
-                    class="cert-link-wrapper"
-                  >
-                    <img
-                      src="imagens/Certificados/DIO CAMPUS EXPERT.jpeg"
-                      alt="Certificado Dio Campus Expert"
-                      class="cert-image"
-                    />
-                    <div class="cert-text-content">
-                      <h3>Embaixadora Dio</h3>
-                      <p>
-                        Atuação estratégica focada em liderança de comunidade e
-                        desenvolvimento de carreira na área de tecnologia. O
-                        programa proporcionou um aprofundamento em
-                        posicionamento profissional, otimização de perfil para
-                        recrutamento (LinkedIn) e estratégias de networking,
-                        consolidando competências essenciais para gestão de
-                        marca pessoal e evolução contínua no ecossistema tech.
-                      </p>
-                    </div>
-                  </a>
-                </div>
-
-                <!-- Certificação 8 -->
-                <div class="cert-item carousel-item certificate cyber">
-                  <a
-                    href="imagens/Certificados/Certificado_-_Nivelamento.pdf"
-                    target="_blank"
-                    class="cert-link-wrapper"
-                  >
-                    <img
-                      src="imagens/Certificados/Certificado_-_Nivelamento.pdf.png"
-                      alt="Certificado Nivelamento Hackers do Bem"
-                      class="cert-image"
-                    />
-                    <div class="cert-text-content">
-                      <h3>Nivelamento Cibersegurança</h3>
-                      <p>
-                        Base técnica em segurança da informação, com foco em
-                        arquitetura de redes e protocolos de comunicação (IPv4 e
-                        IPv6). O treinamento abordou o modelo de camadas, lógica
-                        de programação aplicada à segurança e os fundamentos
-                        necessários para identificar vulnerabilidades e proteger
-                        infraestruturas digitais.
-                      </p>
-                    </div>
-                  </a>
-                </div>
-
-                <!-- Certificação 9 -->
-                <div class="cert-item carousel-item certificate cyber">
-                  <a
-                    href="imagens/Certificados/Certificado_-_Bsico.pdf"
-                    target="_blank"
-                    class="cert-link-wrapper"
-                  >
-                    <img
-                      src="imagens/Certificados/Certificado_-_Bsico.pdf.png"
-                      alt="Certificado Básico Hackers do Bem"
-                      class="cert-image"
-                    />
-                    <div class="cert-text-content">
-                      <h3>Básico Cibersegurança</h3>
-                      <p>
-                        Aprofundamento em defesa cibernética e proteção de
-                        dados. O curso consolidou conhecimentos em topologias de
-                        rede, análise de tráfego e implementação de medidas
-                        preventivas, capacitando o desenvolvimento de aplicações
-                        mais seguras e alinhadas às melhores práticas de
-                        segurança digital do mercado.
-                      </p>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <button
-              class="carousel-arrow next-arrow"
-              data-carousel="certificacoes"
-            >
-              <i class="fas fa-chevron-right"></i>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <!-- Seção "Contato". -->
-      <section id="contato" class="section">
-        <div class="section-container">
-          <h2 class="section-title">Vamos Conversar?</h2>
-          <!-- 
-            Formulário de contato configurado para usar o Formspree.
-            IMPORTANTE: O ID abaixo deve ser o seu ID único do Formspree, associado ao seu e-mail.
-          -->
-
-          <p class="contact-subtitle">
-            Sinta-se à vontade para enviar uma mensagem. Responderei o mais
-            rápido possível!
+          <p class="tech-stack">
+            SQL | Python | Power BI | Excel 
           </p>
-          <br />
 
-          <form
-            action="https://formspree.io/f/mgvgzkln"
-            method="POST"
-            class="contact-form"
-            id="contactForm"
+          <div class="cta-buttons">
+            <a
+              href="Currículo/Curriculo_Analista_de_Dados_Edilene_Ermano.pdf"
+              download
+              target="_blank"
+              class="btn btn-primary"
+            >
+              Baixar CV
+            </a>
+
+            <a href="#projetos" class="btn btn-secondary">
+              Projetos
+            </a>
+          </div>
+
+          <div class="social-links">
+            <a
+              href="https://www.linkedin.com/in/edilene-santos/"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+
+            <a
+              href="https://github.com/edileneermano-crypto"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="image-placeholder">
+          <img
+            src="imagens/Perfil/Edilene Desenho.png"
+            alt="Edilene Ermano - Desenvolvedora sentada programando"
           >
-            <label for="name">Nome:</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Escreva seu nome aqui"
-              required
-            />
-
-            <label for="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Escreva seu e-mail"
-              required
-            />
-
-            <label for="message">Mensagem:</label>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Escreva uma mensagem"
-              rows="6"
-              required
-            ></textarea>
-
-            <button type="submit" class="btn btn-primary">Enviar</button>
-          </form>
-
-          <!-- MENSAGEM DE SUCESSO -->
-          <p class="success-message" id="successMessage">
-            💜 Mensagem enviada com sucesso! Em breve entrarei em contato.
-          </p>
         </div>
-      </section>
-    </main>
 
-    <!-- O <footer> representa o rodapé da página, geralmente com informações de copyright e links secundários. -->
-    <footer class="main-footer">
-      <p>&copy; 2025 Edilene Ermano</p>
-      <p>Acesse minhas redes Sociais | Linkedin | GitHub</p>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/edilene-santos/" target="_blank">
-          <!-- O atributo 'target="_blank"' faz com que o link abra em uma nova aba. -->
-          <i class="fab fa-linkedin-in"></i
-        ></a>
-        <a href="https://github.com/edileneermano-crypto" target="_blank">
-          <i class="fab fa-github-alt"></i
-        ></a>
       </div>
-    </footer>
+    </section>
 
-    <!-- Link para o arquivo JavaScript. É uma boa prática colocá-lo no final do <body> para que a página carregue o conteúdo visual primeiro. -->
-    <script src="script.js"></script>
-  </body>
+
+    <!-- ==========================================
+         02. SOBRE MIM
+         ========================================== -->
+
+    <section id="sobremim" class="section">
+      <div class="section-container">
+
+        <h2 class="section-title">Sobre Mim</h2>
+
+        <div class="about-content">
+
+          <p>
+            Sou uma profissional em formação na área de Análise de Dados, apaixonada 
+            por tecnologia e pelo poder que os dados têm de transformar informações em 
+            conhecimento para apoiar decisões. Meu foco é desenvolver minhas habilidades 
+            em análise, tratamento e interpretação de dados, utilizando ferramentas como 
+            SQL, Python, Power BI e Excel.
+          </p>
+
+          <p>
+            No que eu foco hoje:
+            <br>
+            • Análise de Dados: Busco compreender dados, identificar padrões e transformar 
+            informações em análises que possam gerar insights relevantes.
+            <br>
+            • SQL e Banco de Dados: Desenvolvo meus conhecimentos em consultas, 
+            organização e manipulação de dados para extrair informações de diferentes fontes.
+            <br>
+            • Python: Aprimoro minhas habilidades utilizando Python para tratamento, exploração 
+            e análise de dados.
+             <br>
+            • Power BI e Excel: Desenvolvo dashboards, visualizações e relatórios que 
+            tornam os dados mais claros e facilitam a compreensão dos resultados.
+            <br>
+            • Evolução Contínua: Estou constantemente estudando novas ferramentas, 
+            técnicas e conceitos relacionados à área de dados, buscando transformar conhecimento em projetos práticos.
+
+          </p>
+
+          <p>
+            Acredito que os dados são uma ferramenta poderosa para transformar informações em decisões. 
+            Estou em busca da minha primeira oportunidade na área de Análise de Dados, onde possa aplicar meus 
+            conhecimentos, aprender com profissionais experientes e contribuir com projetos reais. Meu objetivo é continuar 
+            evoluindo profissionalmente e construir uma carreira sólida na área de dados.
+          </p>
+
+          <p>
+            Estou pronta para transformar dados em conhecimento e continuar evoluindo profissionalmente.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         03. SKILLS
+         ========================================== -->
+
+    <section id="skills" class="section primary-bg">
+      <div class="section-container">
+
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skills-content">
+
+          <p>
+            Atualmente cursando <strong>Engenharia de Software</strong>, venho construindo
+            minha trajetória na tecnologia desde os fundamentos do desenvolvimento web.
+            Iniciei meus estudos com <strong>HTML, CSS e JavaScript</strong>, desenvolvendo
+            uma base sólida em lógica, desenvolvimento e resolução de problemas.
+          </p>
+
+          <p>
+            Atualmente, direciono minha evolução profissional para a área de
+            <strong>Análise de Dados</strong>, aprofundando meus conhecimentos em
+            <strong>SQL, Python, Power BI e Excel</strong>.
+            Meu objetivo é transformar dados em informações relevantes e desenvolver
+            análises que contribuam para uma melhor tomada de decisão.
+          </p>
+
+          <div class="skill-category">
+            <h3>Data & BI</h3>
+
+            <ul class="skill-list">
+              <li>
+                 <i class="fas fa-database"></i>
+                 SQL
+              </li>
+
+              <li>
+                <i class="fab fa-python"></i>
+                Python
+              </li>
+
+              <li>
+                <i class="fas fa-chart-bar"></i>
+                Power BI
+             </li>
+
+              <li>
+                <i class="fas fa-file-excel"></i>
+                Excel
+            </li>
+
+              <li>
+                <i class="fas fa-chart-line"></i>
+                Estatística
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3>Technical Foundation</h3>
+
+            <ul class="skill-list">
+              <li>
+                <i class="fab fa-html5"></i>
+                HTML5
+            </li>
+
+              <li>
+                <i class="fab fa-css3-alt"></i>
+                CSS3
+            </li>
+
+              <li>
+                <i class="fab fa-js-square"></i>
+                JavaScript (ES6+)
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3>Core Skills</h3>
+
+          <ul class="skill-list">
+            <li>
+              <i class="fas fa-brain"></i>
+              Pensamento Analítico
+          </li>
+
+            <li>
+              <i class="fas fa-lightbulb"></i>
+              Resolução de Problemas
+          </li>
+
+            <li>
+              <i class="fas fa-rocket"></i>
+              Proatividade
+           </li>
+        </ul>
+      </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         04. PROJETOS
+         ========================================== -->
+
+    <section id="projetos" class="section">
+  <div class="section-container">
+
+    <h2 class="section-title">Projetos</h2>
+
+    <div class="filters">
+      <button onclick="filterProjects('all')">Todos</button>
+      <button onclick="filterProjects('data')">Data & BI</button>
+      <button onclick="filterProjects('python')">Python</button>
+      <button onclick="filterProjects('sql')">SQL</button>
+      <button onclick="filterProjects('web')">Web</button>
+    </div>
+
+    <div class="carousel-container">
+
+      <button
+        class="carousel-arrow prev-arrow"
+        data-carousel="projetos"
+      >
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <div class="carousel-wrapper">
+
+        <div
+          class="project-grid carousel-track"
+          data-carousel-track="projetos"
+        >
+
+          <!-- PROJETO 1 -->
+           <div class="project-card carousel-item project web">
+
+  <div class="project-image-container">
+    <img
+      src="imagens/Projetos/Capa Praise Group.png"
+      alt="Portal Grupo de Louvor"
+      class="project-image"
+    />
+  </div>
+
+  <div class="project-text-content">
+    <h3>Portal Grupo de Louvor</h3>
+
+    <p class="project-description">
+      Sistema web desenvolvido para auxiliar na organização de
+      <strong>repertórios, agendas e informações do grupo de louvor</strong>.
+      Projeto desenvolvido com foco em organização, usabilidade,
+      responsividade e experiência em dispositivos móveis.
+    </p>
+
+    <div class="project-links">
+      <a
+        href="https://github.com/edileneermano-crypto/Grupo-de-louvor.git"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-project secondary"
+      >
+        <i class="fab fa-github"></i> GitHub
+      </a>
+
+      <a
+        href="https://grupodelouvormfjc.netlify.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-project primary"
+      >
+        <i class="fas fa-external-link-alt"></i> Demo
+      </a>
+    </div>
+  </div>
+
+</div>
+       
+         
+
+          <!-- PROJETO 2 -->
+          <div class="project-card carousel-item project web">
+
+            <div class="project-image-container">
+              <img
+                src="imagens/Projetos/Capa site Alura.png"
+                alt="Spotify Clone - Alura"
+                class="project-image"
+              />
+            </div>
+
+            <div class="project-text-content">
+              <h3>Spotify Clone - Alura</h3>
+
+              <p class="project-description">
+                Desenvolvimento de interface inspirada no Spotify durante
+                a <strong>Imersão Front-end</strong>. Prática de
+                <strong>Flexbox e Grid Layout</strong>, com foco em
+                componentes reutilizáveis e responsividade.
+              </p>
+
+              <div class="project-links">
+                <a
+                  href="https://github.com/edileneermano-crypto/imersao-dev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-project secondary"
+                >
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+
+                <a
+                  href="https://edileneermano-crypto.github.io/imersao-dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-project primary"
+                >
+                  <i class="fas fa-external-link-alt"></i> Demo
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- PROJETO 3 -->
+          <div class="project-card carousel-item project web">
+
+            <div class="project-image-container">
+              <img
+                src="imagens/Projetos/Capa Segurança do Trabalho.png"
+                alt="Portfólio Segurança do Trabalho"
+                class="project-image"
+              />
+            </div>
+
+            <div class="project-text-content">
+              <h3>Portfólio Segurança do Trabalho</h3>
+
+              <p class="project-description">
+                Solução profissional com
+                <strong>filtro de conteúdo em tempo real</strong>,
+                SEO otimizado e interface responsiva.
+              </p>
+
+              <div class="project-links">
+                <a
+                  href="https://github.com/edileneermano-crypto/Portif-lio-Seguran-a-do-Trabalho"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-project secondary"
+                >
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+
+                <a
+                  href="https://joaocarlossegurancadotrabalho.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-project primary"
+                >
+                  <i class="fas fa-external-link-alt"></i> Demo
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- PROJETO 4 -->
+          <div class="project-card carousel-item project web">
+
+            <div class="project-image-container">
+              <img
+                src="imagens/Projetos/Capa Meu Site.png"
+                alt="Meu Portfólio Profissional"
+                class="project-image"
+              />
+            </div>
+
+            <div class="project-text-content">
+              <h3>Portfólio Profissional</h3>
+
+              <p class="project-description">
+                Desenvolvimento de portfólio profissional com foco em
+                <strong>Clean Code</strong>, performance, responsividade
+                e organização de projetos.
+              </p>
+
+              <div class="project-links">
+                <a
+                  href="https://github.com/edileneermano-crypto/PORTIF-LIO-PROFISSIONAL"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-project secondary"
+                >
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+
+                <a
+                  href="https://edilenesermano.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-project primary"
+                >
+                  <i class="fas fa-external-link-alt"></i> Demo
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- PROJETO 5 -->
+          <div class="project-card carousel-item project web">
+
+            <div class="project-image-container">
+              <img
+                src="imagens/Projetos/Capa Site Doces.png"
+                alt="E-commerce de Doces"
+                class="project-image"
+              />
+            </div>
+
+            <div class="project-text-content">
+              <h3>E-commerce de Doces</h3>
+
+              <p class="project-description">
+                Landing Page comercial focada em
+                <strong>conversão, catálogo digital e UI/UX</strong>.
+              </p>
+
+              <div class="project-links">
+                <a
+                  href="https://github.com/edileneermano-crypto"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-project secondary"
+                >
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+
+                <a
+                  href="#"
+                  class="btn-project primary disabled"
+                >
+                  <i class="fas fa-hammer"></i> Em breve
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- PROJETO 6 -->
+          <div class="project-card carousel-item project web">
+
+            <div class="project-image-container">
+              <img
+                src="imagens/Projetos/Formulário.png"
+                alt="Sistema de Validação de Formulário"
+                class="project-image"
+              />
+            </div>
+
+            <div class="project-text-content">
+              <h3>Sistema de Validação</h3>
+
+              <p class="project-description">
+                Interface de cadastro criada para praticar lógica de
+                programação, Flexbox, variáveis CSS e manipulação do DOM
+                com JavaScript.
+              </p>
+
+              <div class="project-links">
+                <a
+                  href="https://github.com/edileneermano-crypto/formulario01"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-project secondary"
+                >
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+
+                <a
+                  href="https://edileneermano-crypto.github.io/formulario01/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-project primary"
+                >
+                  <i class="fas fa-external-link-alt"></i> Demo
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- PROJETO 7 -->
+          <div class="project-card carousel-item project web">
+
+            <div class="project-image-container">
+              <img
+                src="imagens/Projetos/Capa AudioBook.png"
+                alt="AudioBook Dom Casmurro"
+                class="project-image"
+              />
+            </div>
+
+            <div class="project-text-content">
+              <h3>AudioBook Dom Casmurro</h3>
+
+              <p class="project-description">
+                Interface interativa de áudio desenvolvida com
+                <strong>JavaScript puro</strong>. Foco em manipulação
+                dinâmica do DOM, controle de reprodução e design
+                responsivo.
+              </p>
+
+              <div class="project-links">
+                <a
+                  href="https://github.com/edileneermano-crypto/Audiobook-DomCasmurro"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-project secondary"
+                >
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+
+                <a
+                  href="https://edileneermano-crypto.github.io/Audiobook-DomCasmurro/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-project primary"
+                >
+                  <i class="fas fa-external-link-alt"></i> Demo
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <button
+        class="carousel-arrow next-arrow"
+        data-carousel="projetos"
+      >
+        <i class="fas fa-chevron-right"></i>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+            </div>
+          </div>
+
+          <button
+            class="carousel-arrow next-arrow"
+            data-carousel="projetos"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </button>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         05. CERTIFICAÇÕES
+         ========================================== -->
+
+    <section id="certificacoes" class="section primary-bg">
+      <div class="section-container">
+
+        <h2 class="section-title">Certificações</h2>
+
+        <div class="filters">
+          <button onclick="filterCertificates('all')">
+            Todos
+          </button>
+
+          <button onclick="filterCertificates('frontend')">
+            Front-end
+          </button>
+
+          <button onclick="filterCertificates('backend')">
+            Back-end
+          </button>
+
+          <button onclick="filterCertificates('fullstack')">
+            Fullstack
+          </button>
+
+          <button onclick="filterCertificates('especialização')">
+            Especialização
+          </button>
+
+          <button onclick="filterCertificates('IA')">
+            IA
+          </button>
+
+          <button onclick="filterCertificates('cyber')">
+            Cibersegurança
+          </button>
+
+          <button onclick="filterCertificates('cloud')">
+            Cloud
+          </button>
+
+          <button onclick="filterCertificates('dadosnegocios')">
+            Dados & Negócios
+          </button>
+
+        </div>
+
+        <div class="carousel-container">
+
+          <button
+            class="carousel-arrow prev-arrow"
+            data-carousel="certificacoes"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+
+          <div class="carousel-wrapper">
+
+            <div
+              class="certification-grid carousel-track"
+              data-carousel-track="certificacoes"
+            >
+
+              <!-- CERTIFICADO 1 -->
+
+              <div class="cert-item carousel-item certificate fullstack">
+
+                <a
+                  href="imagens/Certificados/Certificado_Fullstack_Akad_2025.jpg"
+                  target="_blank"
+                  class="cert-link-wrapper"
+                >
+
+                  <img
+                    src="imagens/Certificados/Certificado_Fullstack_Akad_2025.jpg"
+                    alt="Certificado Akad"
+                    class="cert-image"
+                  >
+
+                  <div class="cert-text-content">
+                    <h3>Akad - Fullstack Developer</h3>
+
+                    <p>
+                      Imersão técnica no desenvolvimento de aplicações
+                      escaláveis, integrando interfaces dinâmicas em React com
+                      ecossistemas robustos em C# e .NET. Foco em arquitetura
+                      MVC, consumo de APIs RESTful e persistência de dados,
+                      consolidando o domínio de ferramentas essenciais para o
+                      ciclo completo de desenvolvimento de software.
+                    </p>
+                  </div>
+
+                </a>
+              </div>
+
+
+              <!-- CERTIFICADO 2 -->
+
+              <div class="cert-item carousel-item certificate cloud">
+
+                <a
+                  href="imagens/Certificados/Certificado_AWS_Santander_2025.png"
+                  target="_blank"
+                  class="cert-link-wrapper"
+                >
+
+                  <img
+                    src="imagens/Certificados/Certificado_AWS_Santander_2025.png"
+                    alt="Certificado Santander Code Girls"
+                    class="cert-image"
+                  >
+
+                  <div class="cert-text-content">
+                    <h3>Santander Code Girls - 2025</h3>
+
+                    <p>
+                      Especialização em computação em nuvem com foco na
+                      infraestrutura AWS, visando a preparação técnica para
+                      certificações globais. O estudo abrangeu desde
+                      fundamentos de arquitetura cloud e serviços essenciais
+                      (EC2, S3, IAM) até a implementação de soluções
+                      escaláveis e seguras, conectando o desenvolvimento de
+                      software às melhores práticas de Cloud Computing.
+                    </p>
+                  </div>
+
+                </a>
+              </div>
+
+
+              <!-- CERTIFICADO 3 -->
+
+              <div class="cert-item carousel-item certificate frontend">
+
+                <a
+                  href="imagens/Certificados/Certificado_JavaScript_Hashtag.png"
+                  target="_blank"
+                  class="cert-link-wrapper"
+                >
+
+                  <img
+                    src="imagens/Certificados/Certificado_JavaScript_Hashtag.png"
+                    alt="Certificado Intensivão de JavaScript"
+                    class="cert-image"
+                  >
+
+                  <div class="cert-text-content">
+                    <h3>Intensivão de JavaScript</h3>
+
+                    <p>
+                      Desenvolvimento prático focado na construção de uma
+                      interface de áudio interativa (Audiobook Dom Casmurro).
+                      O treinamento abordou a manipulação dinâmica do DOM para
+                      controle de reprodução, lógica de eventos em JavaScript
+                      e estilização avançada, resultando em uma aplicação
+                      funcional com foco total na experiência do usuário e
+                      acessibilidade.
+                    </p>
+                  </div>
+
+                </a>
+              </div>
+
+
+              <!-- CERTIFICADO 4 -->
+
+              <div class="cert-item carousel-item certificate IA">
+
+                <a
+                  href="imagens/Certificados/Certificado_IAGenerativa_Nexa.jpg"
+                  target="_blank"
+                  class="cert-link-wrapper"
+                >
+
+                  <img
+                    src="imagens/Certificados/Certificado_IAGenerativa_Nexa.jpg"
+                    alt="Certificado Nexa"
+                    class="cert-image"
+                  >
+
+                  <div class="cert-text-content">
+                    <h3>Nexa - IA Generativa Bedrock</h3>
+
+                    <p>
+                      Exploração técnica de modelos de IA Generativa, com foco
+                      na criação de prompts estratégicos e automação de fluxos
+                      de trabalho. O treinamento capacitou a utilização de
+                      inteligência artificial para otimização de conteúdo e
+                      desenvolvimento de soluções inteligentes, integrando as
+                      tendências mais modernas de tecnologia ao ecossistema de
+                      desenvolvimento.
+                    </p>
+                  </div>
+
+                </a>
+              </div>
+
+
+              <!-- CERTIFICADO 5 -->
+
+              <div class="cert-item carousel-item certificate frontend">
+
+                <a
+                  href="imagens/Certificados/Certificado_GoogleGemini_Alura_2025.png"
+                  target="_blank"
+                  class="cert-link-wrapper"
+                >
+
+                  <img
+                    src="imagens/Certificados/Certificado_GoogleGemini_Alura_2025.png"
+                    alt="Certificado Imersão Alura"
+                    class="cert-image"
+                  >
+
+                  <div class="cert-text-content">
+                    <h3>Alura - Front End - Básico</h3>
+
+                    <p>
+                      Desenvolvimento prático de aplicações web fundamentadas
+                      na tríade HTML5, CSS3 e JavaScript. O treinamento focou
+                      na criação de um sistema de busca funcional, aplicando
+                      manipulação dinâmica do DOM, estilização moderna e
+                      lógica de filtragem de dados para entregar uma interface
+                      interativa e responsiva.
+                    </p>
+                  </div>
+
+                </a>
+              </div>
+
+
+              <!-- CERTIFICADO 6 -->
+
+              <div class="cert-item carousel-item certificate fullstack">
+
+                <a
+                  href="imagens/Certificados/Certificado_Python_info Jr.jpeg"
+                  target="_blank"
+                  class="cert-link-wrapper"
+                >
+
+                  <img
+                    src="imagens/Certificados/Certificado_Python_info Jr.jpeg"
+                    alt="Certificado Introdução a Programação"
+                    class="cert-image"
+                  >
+
+                  <div class="cert-text-content">
+                    <h3>Introdução a Programação</h3>
+
+                    <p>
+                      Sólida base em lógica de programação e algoritmos,
+                      explorando a sintaxe versátil do Python em paralelo com
+                      fundamentos de JavaScript. O curso, chancelado pela Info
+                      Bio Jr. (USP), capacitou a resolução de problemas
+                      estruturados e o entendimento de paradigmas
+                      fundamentais, essenciais para o aprendizado de novas
+                      tecnologias e desenvolvimento de scripts inteligentes.
+                    </p>
+                  </div>
+
+                </a>
+              </div>
+
+
+              <!-- CERTIFICADO 7 -->
+
+              <div class="cert-item carousel-item certificate especialização">
+
+                <a
+                  href="imagens/Certificados/Certificado_CampusExpert_Turma14_Dio_2025.jpeg"
+                  target="_blank"
+                  class="cert-link-wrapper"
+                >
+
+                  <img
+                    src="imagens/Certificados/Certificado_CampusExpert_Turma14_Dio_2025.jpeg"
+                    alt="Certificado Dio Campus Expert"
+                    class="cert-image"
+                  >
+
+                  <div class="cert-text-content">
+                    <h3>Embaixadora Dio - Turma 14</h3>
+
+                    <p>
+                      Atuação estratégica focada em liderança de comunidade e
+                      desenvolvimento de carreira na área de tecnologia. O
+                      programa proporcionou um aprofundamento em
+                      posicionamento profissional, otimização de perfil para
+                      recrutamento (LinkedIn) e estratégias de networking,
+                      consolidando competências essenciais para gestão de
+                      marca pessoal e evolução contínua no ecossistema tech.
+                    </p>
+                  </div>
+
+                </a>
+              </div>
+
+
+              <!-- CERTIFICADO 8 -->
+
+              <div class="cert-item carousel-item certificate cyber">
+
+                <a
+                  href="imagens/Certificados/Certificado_Nivelamento_HackersdoBem_2026.pdf"
+                  target="_blank"
+                  class="cert-link-wrapper"
+                >
+
+                  <img
+                    src="imagens/Certificados/Certificado_Nivelamento_HackersdoBem_2026.png"
+                    alt="Certificado Nivelamento Hackers do Bem"
+                    class="cert-image"
+                  >
+
+                  <div class="cert-text-content">
+                    <h3>Nivelamento Cibersegurança</h3>
+
+                    <p>
+                      Base técnica em segurança da informação, com foco em
+                      arquitetura de redes e protocolos de comunicação (IPv4 e
+                      IPv6). O treinamento abordou o modelo de camadas, lógica
+                      de programação aplicada à segurança e os fundamentos
+                      necessários para identificar vulnerabilidades e proteger
+                      infraestruturas digitais.
+                    </p>
+                  </div>
+
+                </a>
+              </div>
+
+
+              <!-- CERTIFICADO 9 -->
+
+              <div class="cert-item carousel-item certificate cyber">
+
+                <a
+                  href="imagens/Certificados/Certificado_Basico_HackersdoBem_2026.pdf"
+                  target="_blank"
+                  class="cert-link-wrapper"
+                >
+
+                  <img
+                    src="imagens/Certificados/Certificado_Basico_HackersdoBem_2026.png"
+                    alt="Certificado Básico Hackers do Bem"
+                    class="cert-image"
+                  >
+
+                  <div class="cert-text-content">
+                    <h3>Básico Cibersegurança</h3>
+
+                    <p>
+                      Aprofundamento em defesa cibernética e proteção de
+                      dados. O curso consolidou conhecimentos em topologias de
+                      rede, análise de tráfego e implementação de medidas
+                      preventivas, capacitando o desenvolvimento de aplicações
+                      mais seguras e alinhadas às melhores práticas de
+                      segurança digital do mercado.
+                    </p>
+                  </div>
+
+                </a>
+              </div>
+
+               <!-- CERTIFICADO 10 -->
+
+              <div class="cert-item carousel-item certificate dadosnegocios">
+
+                <a
+                  href="imagens/Certificados/Certificado_Marketing_Santander.pdf"
+                  target="_blank"
+                   class="cert-link-wrapper">
+
+               <img
+                  src="imagens/Certificados/Certificado_Marketing_Santander.jpg"
+                  alt="Certificado de Marketing"
+                  class="cert-image">
+
+            <div class="cert-text-content">
+              <h3>Curso de Marketing</h3>
+
+               <p>
+                  Formação complementar em Marketing, ampliando conhecimentos sobre
+                  estratégias de comunicação, relacionamento com clientes e
+                  posicionamento de negócios. Conhecimento complementar à atuação
+                  profissional em tecnologia, dados e Customer Success.
+              </p>
+            </div>
+
+            </a>
+            </div>
+
+            <!-- CERTIFICADO 11 -->
+
+              <div class="cert-item carousel-item certificate especialização">
+
+                <a
+                  href="imagens/Certificados/Certificado_CampusExpert_Turma15_Dio_2026.pdf"
+                  target="_blank"
+                  class="cert-link-wrapper"
+                >
+
+                  <img
+                    src="imagens/Certificados/Certificado_CampusExpert_Turma15_Dio_2026.jpg"
+                    alt="Certificado Dio Campus Expert"
+                    class="cert-image"
+                  >
+
+              <div class="cert-text-content">
+                  <h3>Embaixadora DIO - Turma 15</h3>
+
+                <p>
+                  Participação no programa de Embaixadores DIO, com foco em
+                  <strong>liderança, comunidade e desenvolvimento profissional em tecnologia</strong>.
+                  Experiência voltada ao networking, fortalecimento da marca pessoal,
+                  posicionamento profissional e conexão com o ecossistema tech.
+              </p>
+          </div>
+
+              </a>
+          </div>
+
+            </div>
+          </div>
+
+          <button
+            class="carousel-arrow next-arrow"
+            data-carousel="certificacoes"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </button>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         06. CONTATO
+         ========================================== -->
+
+    <section id="contato" class="section">
+      <div class="section-container">
+
+        <h2 class="section-title">
+          Vamos Conversar?
+        </h2>
+
+        <p class="contact-subtitle">
+          Sinta-se à vontade para enviar uma mensagem. Responderei o mais
+          rápido possível!
+        </p>
+
+        <br>
+
+        <form
+          action="https://formspree.io/f/mgvgzkln"
+          method="POST"
+          class="contact-form"
+          id="contactForm"
+        >
+
+          <label for="name">
+            Nome:
+          </label>
+
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Escreva seu nome aqui"
+            required
+          >
+
+          <label for="email">
+            Email:
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Escreva seu e-mail"
+            required
+          >
+
+          <label for="message">
+            Mensagem:
+          </label>
+
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Escreva uma mensagem"
+            rows="6"
+            required
+          ></textarea>
+
+          <button
+            type="submit"
+            class="btn btn-primary"
+          >
+            Enviar
+          </button>
+
+        </form>
+
+        <p
+          class="success-message"
+          id="successMessage"
+        >
+          💜 Mensagem enviada com sucesso! Em breve entrarei em contato.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+
+  <footer class="main-footer">
+
+    <p>
+      &copy; 2025 Edilene Ermano
+    </p>
+
+    <p>
+      Acesse minhas redes Sociais | Linkedin | GitHub
+    </p>
+
+    <div class="social-links">
+
+      <a
+        href="https://www.linkedin.com/in/edilene-santos/"
+        target="_blank"
+      >
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+
+      <a
+        href="https://github.com/edileneermano-crypto"
+        target="_blank"
+      >
+        <i class="fab fa-github-alt"></i>
+      </a>
+
+    </div>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
 </html>
